@@ -56,7 +56,7 @@ table {
     border-spacing: 0;
 }
 
-.main {
+.cy_main {
     background-image: url(../img/bg.png);
     background-size: cover;
     height: 70%;
@@ -174,5 +174,43 @@ table {
             }
         }
     }
+}
+.pay_main {
+    padding: 0 10px;
+    background: #fff;
+    ul {
+        li {
+            position: relative;
+            height: 100px;
+            .check { 
+                position: absolute;
+                top: 50%;
+                margin-top: -10px;
+                width: 20px;
+                height: 20px;
+            }
+            .list_pic {
+                margin-left: 30px;
+                width: 100px;
+                height: 100px;
+            }
+            .list_box {
+                position: absolute;
+                top: 50%;
+                margin-top: -15px;
+                margin-left: 10px;
+                display: inline-block;
+                div {
+                    margin-bottom: 5px;
+                }
+                .list_money {
+                    font-size: .9rem;
+                    color: #931717;
+                    margin-left: -5px;
+                }
+            }
+        }
+    }
+    
 }
 

@@ -54,58 +54,58 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.main {
+.cy_main {
   background-image: url(../img/bg.png);
   background-size: cover;
   height: 70%; }
-  .main .dish {
+  .cy_main .dish {
     margin: 15px 0 0 15px;
     float: left;
     border-radius: 6px;
     width: 60%; }
-  .main .choose-box {
+  .cy_main .choose-box {
     float: left;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
     width: 35%; }
-  .main .right img {
+  .cy_main .right img {
     width: 30px; }
-  .main .num {
+  .cy_main .num {
     width: 30%;
     height: 32px;
     line-height: 32px;
     font-size: 1.3rem;
     text-align: center; }
-  .main .left img {
+  .cy_main .left img {
     width: 30px; }
-  .main .confirm-box {
+  .cy_main .confirm-box {
     margin-top: 20px;
     float: left;
     width: 35%;
     text-align: center;
     font-size: 14px; }
-    .main .confirm-box .ok {
+    .cy_main .confirm-box .ok {
       line-height: 40px;
       text-align: center;
       width: 73px;
       margin: 0 auto;
       background-image: url(../img/btn.png);
       background-size: cover; }
-    .main .confirm-box .cancel {
+    .cy_main .confirm-box .cancel {
       line-height: 40px;
       text-align: center;
       width: 73px;
       margin: 0 auto;
       background-image: url(../img/btn.png);
       background-size: cover; }
-  .main .info {
+  .cy_main .info {
     clear: both;
     width: 100%; }
-    .main .info .name {
+    .cy_main .info .name {
       padding: 10px; }
-    .main .info .infos {
+    .cy_main .info .infos {
       padding: 0 15px;
       font-family: font2;
       font-size: .8rem;
@@ -148,5 +148,34 @@ table {
         .menus .all-menus .all-menus-ctn .all-menus-ctn-col .menuspick2 {
           position: absolute;
           height: 50%; }
+
+.pay_main {
+  padding: 0 10px;
+  background: #fff; }
+  .pay_main ul li {
+    position: relative;
+    height: 100px; }
+    .pay_main ul li .check {
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+      width: 20px;
+      height: 20px; }
+    .pay_main ul li .list_pic {
+      margin-left: 30px;
+      width: 100px;
+      height: 100px; }
+    .pay_main ul li .list_box {
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      margin-left: 10px;
+      display: inline-block; }
+      .pay_main ul li .list_box div {
+        margin-bottom: 5px; }
+      .pay_main ul li .list_box .list_money {
+        font-size: .9rem;
+        color: #931717;
+        margin-left: -5px; }
 
 /*# sourceMappingURL=style.css.map */
