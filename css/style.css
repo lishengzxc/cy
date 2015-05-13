@@ -117,8 +117,12 @@ table {
   height: 30%; }
   .menus .nav {
     position: absolute;
-    top: -50px;
-    height: 50px; }
+    top: -55px;
+    height: 55px;
+    width: 100%; }
+    .menus .nav .nav-item {
+      float: left;
+      height: 55px; }
   .menus .all-menus {
     position: absolute;
     top: 0px;
