@@ -144,9 +144,10 @@ body {
 /* line 73, ../sass/screen.scss */
 .main .picture_box .picture img {
   display: block;
+  width: 100%;
   height: 100%;
 }
-/* line 77, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .main .picture_box .picture .picture_name {
   position: absolute;
   width: 100%;
@@ -158,7 +159,7 @@ body {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.66);
 }
-/* line 89, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 .main .picture_box .side {
   float: left;
   width: 35%;
@@ -166,25 +167,25 @@ body {
   color: #ed8069;
   font-size: 17px;
 }
-/* line 97, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .main .picture_box .side .add_menus {
   width: 100%;
   height: 35%;
   box-sizing: border-box;
   line-height: 45.5px;
-  background-color: #fdf7f7;
+  background-color: #f6ebe9;
   text-align: center;
   border-bottom: 1px solid #ed8069;
 }
-/* line 107, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .main .picture_box .side .detail {
   width: 100%;
   height: 35%;
   line-height: 45.5px;
-  background-color: #fdf7f7;
+  background-color: #f6ebe9;
   text-align: center;
 }
-/* line 115, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .main .picture_box .side .price {
   width: 100%;
   height: 30%;
@@ -193,4 +194,133 @@ body {
   color: #fff;
   background-color: #ed8069;
   text-align: center;
+}
+/* line 127, ../sass/screen.scss */
+.main .categories {
+  float: left;
+  width: 15%;
+  background-color: #ed8069;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #9E9E9E;
+}
+/* line 135, ../sass/screen.scss */
+.main .categories ul li {
+  font-size: 0;
+  padding: 5px;
+  text-align: center;
+  border-bottom: 1px solid #D2CBCB;
+}
+/* line 139, ../sass/screen.scss */
+.main .categories ul li img {
+  width: 80%;
+}
+/* line 143, ../sass/screen.scss */
+.main .categories ul li:last-child {
+  border-bottom: none;
+}
+/* line 146, ../sass/screen.scss */
+.main .categories ul li:hover {
+  background-color: #eda28f;
+}
+/* line 149, ../sass/screen.scss */
+.main .categories ul li:active {
+  background-color: #eda28f;
+}
+/* line 156, ../sass/screen.scss */
+.main .menus {
+  float: left;
+  width: 85%;
+  box-sizing: border-box;
+  padding-left: 10px;
+  overflow: hidden;
+}
+/* line 163, ../sass/screen.scss */
+.main .menus .menus-item {
+  width: 99%;
+  height: 120px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #9E9E9E;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+/* line 170, ../sass/screen.scss */
+.main .menus .menus-item .menus-info {
+  position: relative;
+  float: left;
+  width: 66%;
+  height: 100%;
+  background-color: #f6ebe9;
+}
+/* line 176, ../sass/screen.scss */
+.main .menus .menus-item .menus-info img {
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 5px;
+  height: 100%;
+}
+/* line 182, ../sass/screen.scss */
+.main .menus .menus-item .menus-info .menus-name {
+  position: absolute;
+  font-size: 17px;
+  color: #ed8069;
+  right: 10px;
+  top: 20px;
+}
+/* line 189, ../sass/screen.scss */
+.main .menus .menus-item .menus-info .menus-price {
+  position: absolute;
+  font-size: 19px;
+  color: #ed8069;
+  right: 10px;
+  bottom: 20px;
+}
+/* line 195, ../sass/screen.scss */
+.main .menus .menus-item .menus-info .menus-price big {
+  font-size: 21px;
+}
+/* line 200, ../sass/screen.scss */
+.main .menus .menus-item .menus-side {
+  float: left;
+  width: 34%;
+  height: 100%;
+}
+/* line 204, ../sass/screen.scss */
+.main .menus .menus-item .menus-side .num {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  font-size: 0;
+  background-color: #f6ebe9;
+}
+/* line 211, ../sass/screen.scss */
+.main .menus .menus-item .menus-side .num .left img {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  margin-top: -10px;
+  width: 21px;
+}
+/* line 221, ../sass/screen.scss */
+.main .menus .menus-item .menus-side .num .right img {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -10px;
+  width: 21px;
+}
+/* line 229, ../sass/screen.scss */
+.main .menus .menus-item .menus-side .num .num-value {
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: #ed8069;
+  line-height: 36px;
+}
+/* line 239, ../sass/screen.scss */
+.main .menus .menus-item .menus-side .add_cart {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background-color: #ed8069;
+  font-size: 0;
 }
