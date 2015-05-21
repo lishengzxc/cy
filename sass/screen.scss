@@ -4,3 +4,56 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+$color: rgb(237, 128, 105);
+$color_hover: rgb(237, 162, 143);
+html, body {
+	height: 100%;
+}
+
+body {
+	background-image: url(../img/bg.png);
+}
+
+.main {
+	padding: 15px;
+	box-sizing: border-box;
+	height: 100%;
+
+	nav {
+		width: 100%;
+		background-color: $color;
+		overflow: hidden;
+		border-radius: 5px;
+		ul {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+			li {
+				float: left;
+				width: (100% / 6);
+				padding: 7px 0;
+				box-sizing: border-box;
+				border-right: 1px solid #D2CBCB; 
+				&:last-child {
+					border-right: none;
+				}
+				&:hover {
+					background-color: $color_hover;
+				}
+				&:active {
+					background-color: $color_hover;
+				}
+				img {
+					display: block;
+					width: 50%;
+					margin: 0 auto;
+					
+				}
+			}
+		}
+	}
+
+	.picture_box {
+
+	}
+}
