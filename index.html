@@ -20,7 +20,7 @@
 		</nav>
 		<div class="picture_box">
 			<div class="picture" id="picture">
-				<div class="picture_list">
+				<div class="picture_list" id="picture_list">
 					<img src="img/dish-1.png" alt="" id="p1">
 					<img src="img/dish-1.png" alt="" id="p2">
 					<img src="img/dish-1.png" alt="" id="p3">
@@ -77,9 +77,29 @@
 
 		var pBox = document.getElementById('picture');
 
-		pBox.addEventListener('touchmove', function (e) {
-			console.log(e);
+
+		var startX, startY, endX, endY;
+
+		pBox.addEventListener('touchstart', function (e) {
+			var touch = e.touches[0];
+            startY = touch.pageY;
+            startX = touch.pageX;
 		}, false);
+
+		pBox.addEventListener('touchmove', function (e) {
+			var touch = e.touches[0];
+			endX = touch.pageX;
+			endY = touch.pageY;
+		}, false);
+
+		pBox.addEventListener('touchend', function (e) {
+			if ((startX - endX) > 0) {
+				document.getElementById("picture_list").style.marginLeft = "-100%";
+			} else if (startX - endX < 0) {
+				document.getElementById("picture_list").style.marginLeft = "100%";
+			}
+		}, false);
+
 	}
 	</script>
 </body>
