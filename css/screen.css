@@ -144,15 +144,18 @@ body {
 /* line 73, ../sass/screen.scss */
 .main .picture_box .picture .picture_list {
   overflow: hidden;
+  width: 100%;
   height: 100%;
 }
-/* line 76, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .main .picture_box .picture .picture_list img {
+  display: block;
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-/* line 83, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .main .picture_box .picture .picture_name {
   position: absolute;
   width: 100%;
@@ -164,7 +167,7 @@ body {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.66);
 }
-/* line 95, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .main .picture_box .side {
   float: left;
   width: 35%;
@@ -172,7 +175,7 @@ body {
   color: #ed8069;
   font-size: 17px;
 }
-/* line 103, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 .main .picture_box .side .add_menus {
   width: 100%;
   height: 35%;
@@ -182,7 +185,7 @@ body {
   text-align: center;
   border-bottom: 1px solid #ed8069;
 }
-/* line 113, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .main .picture_box .side .detail {
   width: 100%;
   height: 35%;
@@ -190,7 +193,7 @@ body {
   background-color: #f6ebe9;
   text-align: center;
 }
-/* line 121, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .main .picture_box .side .price {
   width: 100%;
   height: 30%;
@@ -200,7 +203,7 @@ body {
   background-color: #ed8069;
   text-align: center;
 }
-/* line 132, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 .main .categories {
   float: left;
   width: 15%;
@@ -208,34 +211,34 @@ body {
   border-radius: 5px;
   box-shadow: 1px 1px 5px #9E9E9E;
 }
-/* line 140, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .main .categories ul li {
   font-size: 0;
   padding: 5px;
   text-align: center;
   border-bottom: 1px solid #D2CBCB;
 }
-/* line 144, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .main .categories ul li img {
   width: 80%;
 }
-/* line 148, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .main .categories ul li:first-child {
   border-radius: 5px 5px 0 0;
 }
-/* line 151, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 .main .categories ul li:last-child {
   border-bottom: none;
 }
-/* line 154, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 .main .categories ul li:hover {
   background-color: #eda28f;
 }
-/* line 157, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 .main .categories ul li:active {
   background-color: #eda28f;
 }
-/* line 164, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 .main .menus {
   float: left;
   width: 85%;
@@ -243,7 +246,7 @@ body {
   padding-left: 10px;
   overflow: hidden;
 }
-/* line 171, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 .main .menus .menus-item {
   width: 99%;
   height: 120px;
@@ -252,7 +255,7 @@ body {
   margin-bottom: 5px;
   overflow: hidden;
 }
-/* line 178, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .main .menus .menus-item .menus-img {
   position: relative;
   float: left;
@@ -263,20 +266,20 @@ body {
   border-right: 1px solid #f8cdc4;
   text-align: center;
 }
-/* line 187, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .main .menus .menus-item .menus-img img {
   border-radius: 50%;
   box-sizing: border-box;
   padding: 5px;
   height: 100%;
 }
-/* line 195, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .main .menus .menus-item .menus-side {
   float: left;
   width: 40%;
   height: 100%;
 }
-/* line 199, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 .main .menus .menus-item .menus-side .num {
   position: relative;
   width: 100%;
@@ -284,7 +287,7 @@ body {
   font-size: 0;
   background-color: #f6ebe9;
 }
-/* line 206, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .main .menus .menus-item .menus-side .num .left img {
   position: absolute;
   top: 50%;
@@ -292,7 +295,7 @@ body {
   margin-top: -10px;
   width: 21px;
 }
-/* line 216, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 .main .menus .menus-item .menus-side .num .right img {
   position: absolute;
   top: 50%;
@@ -300,7 +303,7 @@ body {
   margin-top: -10px;
   width: 21px;
 }
-/* line 224, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 .main .menus .menus-item .menus-side .num .num-value {
   text-align: center;
   font-size: 17px;
@@ -308,18 +311,18 @@ body {
   color: #ed8069;
   line-height: 36px;
 }
-/* line 234, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 .main .menus .menus-item .menus-side .menus-info {
   height: 70%;
   background-color: #ed8069;
 }
-/* line 237, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 .main .menus .menus-item .menus-side .menus-info div {
   line-height: 42px;
   text-align: center;
   color: #fff;
 }
-/* line 246, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 .main .menus .menus-item .menus-side .menus-info .menus-price big {
   font-size: 1.1rem;
 }

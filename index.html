@@ -19,9 +19,11 @@
 			</ul>
 		</nav>
 		<div class="picture_box">
-			<div class="picture">
+			<div class="picture" id="picture">
 				<div class="picture_list">
-					<img src="img/dish-1.png" alt=""><img src="img/dish-1.png" alt=""><img src="img/dish-1.png" alt="">
+					<img src="img/dish-1.png" alt="" id="p1">
+					<img src="img/dish-1.png" alt="" id="p2">
+					<img src="img/dish-1.png" alt="" id="p3">
 				</div>
 				<div class="picture_name">
 					酱烧鸭腿
@@ -63,41 +65,22 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="menus-item">
-				<div class="menus-info">
-					<img src="img/dishi-4.png" alt="">
-					<div class="menus-name">小龙虾</div>
-					<div class="menus-price"><big>15</big>.00</div>
-				</div>
-				<div class="menus-side">
-
-					<div class="num">
-						<div class="left"><img src="img/left.png" alt=""></div>
-						<div class="num-value">1</div>
-						<div class="right"><img src="img/right.png" alt=""></div>
-					</div>
-					<div class="add_cart"></div>
-				</div>
-			</div>
-			<div class="menus-item">
-				<div class="menus-info">
-					<img src="img/dishi-4.png" alt="">
-					<div class="menus-name">小龙虾</div>
-					<div class="menus-price"><big>15</big>.00</div>
-				</div>
-				<div class="menus-side">
-
-					<div class="num">
-						<div class="left"><img src="img/left.png" alt=""></div>
-						<div class="num-value">1</div>
-						<div class="right"><img src="img/right.png" alt=""></div>
-					</div>
-					<div class="add_cart"></div>
-				</div>
-			</div> -->
-			
-			
 		</div>
 	</div>
+	<script>
+	window.onload = function () {
+		var pList = document.querySelectorAll('.picture_list img');
+	
+		for (var i = 0; i < pList.length; i++) {
+			pList[i].style.left = i * 100 + "%";
+		}
+
+		var pBox = document.getElementById('picture');
+
+		pBox.addEventListener('touchmove', function (e) {
+			console.log(e);
+		}, false);
+	}
+	</script>
 </body>
 </html>
