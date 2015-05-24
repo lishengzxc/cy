@@ -244,47 +244,30 @@ body {
   overflow: hidden;
 }
 /* line 170, ../sass/screen.scss */
-.main .menus .menus-item .menus-info {
+.main .menus .menus-item .menus-img {
   position: relative;
   float: left;
-  width: 66%;
+  width: 60%;
   height: 100%;
   background-color: #f6ebe9;
+  box-sizing: border-box;
+  border-right: 1px solid #ed8069;
+  text-align: center;
 }
-/* line 176, ../sass/screen.scss */
-.main .menus .menus-item .menus-info img {
+/* line 179, ../sass/screen.scss */
+.main .menus .menus-item .menus-img img {
   border-radius: 50%;
   box-sizing: border-box;
   padding: 5px;
   height: 100%;
 }
-/* line 182, ../sass/screen.scss */
-.main .menus .menus-item .menus-info .menus-name {
-  position: absolute;
-  font-size: 17px;
-  color: #ed8069;
-  right: 10px;
-  top: 20px;
-}
-/* line 189, ../sass/screen.scss */
-.main .menus .menus-item .menus-info .menus-price {
-  position: absolute;
-  font-size: 19px;
-  color: #ed8069;
-  right: 10px;
-  bottom: 20px;
-}
-/* line 195, ../sass/screen.scss */
-.main .menus .menus-item .menus-info .menus-price big {
-  font-size: 21px;
-}
-/* line 200, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 .main .menus .menus-item .menus-side {
   float: left;
-  width: 34%;
+  width: 40%;
   height: 100%;
 }
-/* line 204, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .main .menus .menus-item .menus-side .num {
   position: relative;
   width: 100%;
@@ -292,7 +275,7 @@ body {
   font-size: 0;
   background-color: #f6ebe9;
 }
-/* line 211, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .main .menus .menus-item .menus-side .num .left img {
   position: absolute;
   top: 50%;
@@ -300,7 +283,7 @@ body {
   margin-top: -10px;
   width: 21px;
 }
-/* line 221, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 .main .menus .menus-item .menus-side .num .right img {
   position: absolute;
   top: 50%;
@@ -308,7 +291,7 @@ body {
   margin-top: -10px;
   width: 21px;
 }
-/* line 229, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 .main .menus .menus-item .menus-side .num .num-value {
   text-align: center;
   font-size: 17px;
@@ -316,11 +299,18 @@ body {
   color: #ed8069;
   line-height: 36px;
 }
-/* line 239, ../sass/screen.scss */
-.main .menus .menus-item .menus-side .add_cart {
-  position: relative;
-  width: 100%;
+/* line 226, ../sass/screen.scss */
+.main .menus .menus-item .menus-side .menus-info {
   height: 70%;
   background-color: #ed8069;
-  font-size: 0;
+}
+/* line 229, ../sass/screen.scss */
+.main .menus .menus-item .menus-side .menus-info div {
+  line-height: 42px;
+  text-align: center;
+  color: #fff;
+}
+/* line 238, ../sass/screen.scss */
+.main .menus .menus-item .menus-side .menus-info .menus-price big {
+  font-size: 1.1rem;
 }

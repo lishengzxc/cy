@@ -167,39 +167,26 @@ body {
 			box-shadow: 2px 2px 5px #9E9E9E;
 			margin-bottom: 5px;
 			overflow: hidden;
-			.menus-info {
+			.menus-img {
 				position: relative;
 				float: left;
-				width: 66%;
+				width: 60%;
 				height: 100%;
 				background-color: $color_bg;
+				box-sizing: border-box;
+				border-right: 1px solid $color;
+				text-align: center;
 				img {
 					border-radius: 50%;
 					box-sizing: border-box;
 					padding: 5px;
 					height: 100%;
 				}
-				.menus-name {
-					position: absolute;
-					font-size: 17px;
-					color: $color;
-					right: 10px;
-					top: 20px;
-				}
-				.menus-price {
-					position: absolute;
-					font-size: 19px;
-					color: $color;
-					right: 10px;
-					bottom: 20px;
-					big {
-						font-size: 21px;
-					}
-				}
+				
 			}
 			.menus-side {
 				float: left;
-				width: 34%;
+				width: 40%;
 				height: 100%;	
 				.num {
 					position: relative;
@@ -236,13 +223,22 @@ body {
 					}
 				}
 
-				.add_cart {
-					position: relative;
-					width: 100%;
+				.menus-info {
 					height: 70%;
 					background-color: $color;
-					font-size: 0;
-					
+					div {
+						line-height: 42px;
+						text-align: center;
+						color: #fff;
+					}
+					.menus-name {
+
+					}
+					.menus-price {
+						big {
+							font-size: 1.1rem;
+						}
+					}
 				}
 
 
