@@ -81,6 +81,8 @@ ul {
   aside {
     float: left;
     width: 80px;
+    box-sizing: border-box;
+    border-right: 1px solid #dedede;
     height: calc(100% - 40px);
     background-color: #f5f5f5;
     ul {
@@ -94,11 +96,32 @@ ul {
     }
   }
   .menusList {
+    float: left;
+    width: calc(100% - 80px);
     ul {
       margin: 0;
       padding: 0;
       li {
-        
+        position: relative;
+        height: 100px;
+        padding: 16px 0;
+        img {
+          margin-left: 16px;
+          width: 66px;
+          height: 66px;
+        }
+        .dishname {
+
+        }
+        .dishinfo {
+
+        }
+        .sales {
+
+        }
+        .price {
+          
+        }
       }
     }
   }
