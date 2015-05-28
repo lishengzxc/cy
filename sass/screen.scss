@@ -98,6 +98,7 @@ ul {
   .menusList {
     float: left;
     width: calc(100% - 80px);
+
     ul {
       margin: 0;
       padding: 0;
@@ -111,16 +112,60 @@ ul {
           height: 66px;
         }
         .dishname {
+          position: absolute;
+          margin: 0;
+          top: 16px;
+          left: 90px;
+          color: #6ba2d7;
 
         }
         .dishinfo {
+          position: absolute;
+          margin: 0;
+          top: 42px;
+          left: 90px;
+          font-size: 0.8rem;
 
         }
         .sales {
-
+          position: absolute;
+          margin: 0;
+          top: 62px;
+          left: 90px;
+          font-size: 0.8rem;
         }
         .price {
-          
+          position: absolute;
+          margin: 0;
+          top: 20px;
+          right: 16px;
+          color: #ff6000;
+        }
+        .reduce {
+          position: absolute;
+          top: 60px;
+          right: 80px;
+          border: none;
+          padding-top: 3px;
+          width: 25px;
+          border-radius: 50%;
+          height: 25px;
+          color: #fff;
+          background-color: #6ba2d7;
+          outline: none;
+        }
+        .plus {
+          position: absolute;
+          top: 60px;
+          right: 16px;
+          border: none;
+          padding-top: 3px;
+          width: 25px;
+          border-radius: 50%;
+          height: 25px;
+          color: #fff;
+          background-color: #6ba2d7;
+          outline: none;
         }
       }
     }

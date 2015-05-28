@@ -116,20 +116,80 @@ ul {
   float: left;
   width: calc(100% - 80px);
 }
-/* line 101, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .menus .menusList ul {
   margin: 0;
   padding: 0;
 }
-/* line 104, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .menus .menusList ul li {
   position: relative;
   height: 100px;
   padding: 16px 0;
 }
-/* line 108, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .menus .menusList ul li img {
   margin-left: 16px;
   width: 66px;
   height: 66px;
+}
+/* line 114, ../sass/screen.scss */
+.menus .menusList ul li .dishname {
+  position: absolute;
+  margin: 0;
+  top: 16px;
+  left: 90px;
+  color: #6ba2d7;
+}
+/* line 122, ../sass/screen.scss */
+.menus .menusList ul li .dishinfo {
+  position: absolute;
+  margin: 0;
+  top: 42px;
+  left: 90px;
+  font-size: 0.8rem;
+}
+/* line 130, ../sass/screen.scss */
+.menus .menusList ul li .sales {
+  position: absolute;
+  margin: 0;
+  top: 62px;
+  left: 90px;
+  font-size: 0.8rem;
+}
+/* line 137, ../sass/screen.scss */
+.menus .menusList ul li .price {
+  position: absolute;
+  margin: 0;
+  top: 20px;
+  right: 16px;
+  color: #ff6000;
+}
+/* line 144, ../sass/screen.scss */
+.menus .menusList ul li .reduce {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  border: none;
+  padding-top: 3px;
+  width: 25px;
+  border-radius: 50%;
+  height: 25px;
+  color: #fff;
+  background-color: #6ba2d7;
+  outline: none;
+}
+/* line 157, ../sass/screen.scss */
+.menus .menusList ul li .plus {
+  position: absolute;
+  top: 60px;
+  right: 16px;
+  border: none;
+  padding-top: 3px;
+  width: 25px;
+  border-radius: 50%;
+  height: 25px;
+  color: #fff;
+  background-color: #6ba2d7;
+  outline: none;
 }
