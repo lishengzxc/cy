@@ -5,46 +5,48 @@
 /* line 8, ../sass/screen.scss */
 html, body {
   width: 100%;
+  height: 100%;
   font-size: 16px;
   overflow-x: scroll;
 }
 
-/* line 14, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
 ul {
   list-style: none;
 }
 
-/* line 17, ../sass/screen.scss */
+/* line 18, ../sass/screen.scss */
 .ctn {
   position: relative;
   left: -100%;
   width: 300%;
-  overflow: hidden;
+  height: 100%;
+  overflow: scroll;
 }
 
-/* line 23, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 .seller {
   float: left;
   width: calc(100% / 3);
 }
-/* line 27, ../sass/screen.scss */
+/* line 29, ../sass/screen.scss */
 .seller ul li {
   position: relative;
   padding: 0 15px;
 }
-/* line 30, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 .seller ul li .sellerlogo {
   width: 50px;
   height: 50px;
 }
-/* line 34, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 .seller ul li .sellername {
   position: absolute;
   top: 15px;
   left: 80px;
   margin: 0;
 }
-/* line 40, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 .seller ul li .sellerinfo {
   position: absolute;
   top: 45px;
@@ -53,38 +55,62 @@ ul {
   color: #474747;
   font-size: 0.8rem;
 }
-/* line 48, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .seller ul li .right {
   float: right;
   margin-top: 6px;
   color: #7d7d7d;
 }
 
-/* line 56, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 .menus {
   float: left;
   width: calc(100% / 3);
+  height: 100%;
 }
-/* line 59, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .menus header {
   background-color: #93BBE2;
   width: 100%;
   height: 40px;
 }
-/* line 63, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .menus header ul {
   margin: 0;
   padding: 0;
   text-align: center;
 }
-/* line 67, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .menus header ul li {
   float: left;
   line-height: 40px;
   color: #fff;
   width: calc(100% / 3);
 }
-/* line 72, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 .menus header ul li.active {
   background-color: #6ba2d7;
+}
+/* line 81, ../sass/screen.scss */
+.menus aside {
+  float: left;
+  width: 80px;
+  height: calc(100% - 40px);
+  background-color: #f5f5f5;
+}
+/* line 86, ../sass/screen.scss */
+.menus aside ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* line 90, ../sass/screen.scss */
+.menus aside ul li {
+  padding: 20px 0;
+  font-size: 1.1rem;
+}
+/* line 97, ../sass/screen.scss */
+.menus .menusList ul {
+  margin: 0;
+  padding: 0;
 }

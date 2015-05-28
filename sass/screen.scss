@@ -7,6 +7,7 @@
 
 html, body {
   width: 100%;
+  height: 100%;
   font-size: 16px;
   overflow-x: scroll;
 }
@@ -18,7 +19,8 @@ ul {
   position: relative;
   left: -100%;
   width: 300%;
-  overflow: hidden;
+  height: 100%;
+  overflow: scroll;
 }
 .seller {
   float: left;
@@ -56,6 +58,7 @@ ul {
 .menus {
   float: left;
   width: calc(100% / 3);
+  height: 100%;
   header {
     background-color: #93BBE2;
     width: 100%;
@@ -75,5 +78,28 @@ ul {
       }
     }
   }
-
+  aside {
+    float: left;
+    width: 80px;
+    height: calc(100% - 40px);
+    background-color: #f5f5f5;
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      li {
+        padding: 20px 0;
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .menusList {
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        
+      }
+    }
+  }
 }
