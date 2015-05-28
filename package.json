@@ -1,0 +1,19 @@
+{
+  "name": "cy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lishengzxc/cy.git"
+  },
+  "author": "eric@lishengcn.cn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lishengzxc/cy/issues"
+  },
+  "homepage": "https://github.com/lishengzxc/cy#readme"
+}
