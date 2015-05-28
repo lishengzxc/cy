@@ -94,7 +94,7 @@ ul {
 /* line 81, ../sass/screen.scss */
 .menus aside {
   float: left;
-  width: 80px;
+  width: 50px;
   box-sizing: border-box;
   border-right: 1px solid #dedede;
   height: calc(100% - 40px);
@@ -108,32 +108,36 @@ ul {
 }
 /* line 92, ../sass/screen.scss */
 .menus aside ul li {
-  padding: 20px 0;
+  padding: 12px 0;
   font-size: 1.1rem;
 }
-/* line 98, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
+.menus aside ul li.active {
+  background-color: gainsboro;
+}
+/* line 101, ../sass/screen.scss */
 .menus .menusList {
   float: left;
-  width: calc(100% - 80px);
+  width: calc(100% - 50px);
 }
-/* line 102, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .menus .menusList ul {
   margin: 0;
   padding: 0;
 }
-/* line 105, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .menus .menusList ul li {
   position: relative;
   height: 100px;
   padding: 16px 0;
 }
-/* line 109, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .menus .menusList ul li img {
   margin-left: 16px;
   width: 66px;
   height: 66px;
 }
-/* line 114, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .menus .menusList ul li .dishname {
   position: absolute;
   margin: 0;
@@ -141,7 +145,7 @@ ul {
   left: 90px;
   color: #6ba2d7;
 }
-/* line 122, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .menus .menusList ul li .dishinfo {
   position: absolute;
   margin: 0;
@@ -149,7 +153,7 @@ ul {
   left: 90px;
   font-size: 0.8rem;
 }
-/* line 130, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .menus .menusList ul li .sales {
   position: absolute;
   margin: 0;
@@ -157,19 +161,19 @@ ul {
   left: 90px;
   font-size: 0.8rem;
 }
-/* line 137, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .menus .menusList ul li .price {
   position: absolute;
   margin: 0;
-  top: 20px;
+  top: 16px;
   right: 16px;
   color: #ff6000;
 }
-/* line 144, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .menus .menusList ul li .reduce {
   position: absolute;
   top: 60px;
-  right: 80px;
+  right: 70px;
   border: none;
   padding-top: 3px;
   width: 25px;
@@ -179,7 +183,7 @@ ul {
   background-color: #6ba2d7;
   outline: none;
 }
-/* line 157, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 .menus .menusList ul li .plus {
   position: absolute;
   top: 60px;
@@ -192,4 +196,12 @@ ul {
   color: #fff;
   background-color: #6ba2d7;
   outline: none;
+}
+/* line 173, ../sass/screen.scss */
+.menus .menusList ul li .value {
+  position: absolute;
+  text-align: center;
+  top: 60px;
+  right: 41px;
+  width: 29px;
 }

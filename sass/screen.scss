@@ -80,7 +80,7 @@ ul {
   }
   aside {
     float: left;
-    width: 80px;
+    width: 50px;
     box-sizing: border-box;
     border-right: 1px solid #dedede;
     height: calc(100% - 40px);
@@ -90,14 +90,17 @@ ul {
       padding: 0;
       text-align: center;
       li {
-        padding: 20px 0;
+        padding: 12px 0;
         font-size: 1.1rem;
+        &.active {
+          background-color: darken(#f5f5f5, 10%);
+        }
       }
     }
   }
   .menusList {
     float: left;
-    width: calc(100% - 80px);
+    width: calc(100% - 50px);
 
     ul {
       margin: 0;
@@ -137,14 +140,14 @@ ul {
         .price {
           position: absolute;
           margin: 0;
-          top: 20px;
+          top: 16px;
           right: 16px;
           color: #ff6000;
         }
         .reduce {
           position: absolute;
           top: 60px;
-          right: 80px;
+          right: 70px;
           border: none;
           padding-top: 3px;
           width: 25px;
@@ -166,6 +169,13 @@ ul {
           color: #fff;
           background-color: #6ba2d7;
           outline: none;
+        }
+        .value {
+          position: absolute;
+          text-align: center;
+          top: 60px;
+          right: 41px;
+          width: 29px;
         }
       }
     }
