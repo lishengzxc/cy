@@ -3,17 +3,77 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+//@import "compass/reset";
 
 html, body {
   width: 100%;
+  font-size: 16px;
+  overflow-x: scroll;
 }
 
+ul {
+  list-style: none;
+}
+.ctn {
+  position: relative;
+  left: -100%;
+  width: 300%;
+  overflow: hidden;
+}
 .seller {
-  width: 100%;
+  float: left;
+  width: calc(100% / 3);
   ul {
     li {
-      
+      position: relative;
+      padding: 0 15px;
+      .sellerlogo {
+        width: 50px;
+        height: 50px;
+      }
+      .sellername {
+        position: absolute;
+        top: 15px;
+        left: 80px;
+        margin: 0;
+      }
+      .sellerinfo {
+        position: absolute;
+        top: 45px;
+        left: 80px;
+        margin: 0;
+        color: #474747;
+        font-size: 0.8rem;
+      }
+      .right {
+        float: right;
+        margin-top: 6px;
+        color: #7d7d7d;
+      }
     }
   }
+}
+.menus {
+  float: left;
+  width: calc(100% / 3);
+  header {
+    background-color: #93BBE2;
+    width: 100%;
+    height: 40px;
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      li {
+        float: left;
+        line-height: 40px;
+        color: #fff;
+        width: calc(100% / 3);
+        &.active {
+          background-color: darken(#93BBE2, 10%);
+        }
+      }
+    }
+  }
+
 }
