@@ -207,13 +207,15 @@ body {
   }
 }
 .pop-panel {
-//  display: none;
+  display: none;
   position: absolute;
   box-sizing: border-box;
   padding: 10px 10px 10px 10px;
-  top: 0;
-  height: 100%;
-  width: 100%;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background-color: rgba(0, 0, 0, 0.7);
   .pop-ctn {
     width: 100%;
     box-sizing: border-box;

@@ -304,14 +304,17 @@ body {
 
 /* line 209, ../sass/screen.scss */
 .pop-panel {
+  display: none;
   position: absolute;
   box-sizing: border-box;
   padding: 10px 10px 10px 10px;
-  top: 0;
-  height: 100%;
-  width: 100%;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
-/* line 217, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 .pop-panel .pop-ctn {
   width: 100%;
   box-sizing: border-box;
@@ -320,18 +323,18 @@ body {
   border-radius: 6px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
-/* line 223, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 .pop-panel .pop-ctn img {
   width: 100%;
   border-radius: 6px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
-/* line 227, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 .pop-panel .pop-ctn h2 {
   padding: 10px;
   color: #e28346;
 }
-/* line 231, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 .pop-panel .pop-ctn p {
   padding: 0 10px 10px 10px;
   margin-bottom: 20px;
@@ -339,24 +342,24 @@ body {
   font-size: 14px;
   line-height: 18px;
 }
-/* line 238, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl {
   position: relative;
   padding: 10px;
   width: 100%;
 }
-/* line 242, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl div {
   display: inline-block;
 }
-/* line 245, ../sass/screen.scss */
+/* line 247, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .menus-price {
   position: absolute;
   font-size: 1.2rem;
   bottom: 12px;
   color: #e28346;
 }
-/* line 251, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .reduce, .pop-panel .pop-ctn .ctrl .add {
   position: absolute;
   width: 22px;
@@ -368,17 +371,17 @@ body {
   color: #fff;
   border-radius: 6px;
 }
-/* line 260, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .add {
   bottom: 10px;
   right: 25px;
 }
-/* line 264, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .reduce {
   bottom: 10px;
   right: 77px;
 }
-/* line 268, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .value {
   position: absolute;
   width: 30px;
