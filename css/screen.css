@@ -306,7 +306,7 @@ body {
 .pop-panel {
   position: absolute;
   box-sizing: border-box;
-  padding: 20px 20px 60px 20px;
+  padding: 10px 10px 10px 10px;
   top: 0;
   height: 100%;
   width: 100%;
@@ -334,25 +334,29 @@ body {
 /* line 231, ../sass/screen.scss */
 .pop-panel .pop-ctn p {
   padding: 0 10px 10px 10px;
+  margin-bottom: 20px;
   text-indent: 2em;
   font-size: 14px;
   line-height: 18px;
 }
-/* line 237, ../sass/screen.scss */
+/* line 238, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl {
   position: relative;
   padding: 10px;
   width: 100%;
 }
-/* line 241, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl div {
   display: inline-block;
 }
-/* line 244, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .menus-price {
+  position: absolute;
+  font-size: 1.2rem;
+  bottom: 12px;
   color: #e28346;
 }
-/* line 247, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .reduce, .pop-panel .pop-ctn .ctrl .add {
   position: absolute;
   width: 22px;
@@ -364,17 +368,17 @@ body {
   color: #fff;
   border-radius: 6px;
 }
-/* line 256, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .add {
   bottom: 10px;
   right: 25px;
 }
-/* line 260, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .reduce {
   bottom: 10px;
   right: 77px;
 }
-/* line 264, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .value {
   position: absolute;
   width: 30px;
