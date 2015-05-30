@@ -11,12 +11,9 @@
     "url": "git+https://github.com/lishengzxc/cy.git"
   },
   "author": "eric@lishengcn.cn",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/lishengzxc/cy/issues"
   },
-  "homepage": "https://github.com/lishengzxc/cy#readme",
-  "devDependencies": {
-    "gulp": "^3.8.11"
-  }
+  "homepage": "https://github.com/lishengzxc/cy#readme"
 }

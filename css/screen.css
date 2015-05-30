@@ -2,206 +2,67 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 8, ../sass/screen.scss */
-html, body {
-  width: 100%;
-  height: 100%;
-  font-size: 16px;
-  overflow-x: scroll;
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/css/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-/* line 15, ../sass/screen.scss */
-ul {
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/css/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/css/compass/reset/_utilities.scss */
+ol, ul {
   list-style: none;
 }
 
-/* line 18, ../sass/screen.scss */
-.ctn {
-  position: relative;
-  left: -100%;
-  width: 300%;
-  height: 100%;
-  overflow: scroll;
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/css/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-/* line 25, ../sass/screen.scss */
-.seller {
-  float: left;
-  width: calc(100% / 3);
-}
-/* line 29, ../sass/screen.scss */
-.seller ul li {
-  position: relative;
-  padding: 0 15px;
-}
-/* line 32, ../sass/screen.scss */
-.seller ul li .sellerlogo {
-  width: 50px;
-  height: 50px;
-}
-/* line 36, ../sass/screen.scss */
-.seller ul li .sellername {
-  position: absolute;
-  top: 15px;
-  left: 80px;
-  margin: 0;
-}
-/* line 42, ../sass/screen.scss */
-.seller ul li .sellerinfo {
-  position: absolute;
-  top: 45px;
-  left: 80px;
-  margin: 0;
-  color: #474747;
-  font-size: 0.8rem;
-}
-/* line 50, ../sass/screen.scss */
-.seller ul li .right {
-  float: right;
-  margin-top: 6px;
-  color: #7d7d7d;
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/css/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
 }
 
-/* line 58, ../sass/screen.scss */
-.menus {
-  float: left;
-  width: calc(100% / 3);
-  height: 100%;
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/css/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
 }
-/* line 62, ../sass/screen.scss */
-.menus header {
-  background-color: #93BBE2;
-  width: 100%;
-  height: 40px;
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/css/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
 }
-/* line 66, ../sass/screen.scss */
-.menus header ul {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-/* line 70, ../sass/screen.scss */
-.menus header ul li {
-  float: left;
-  line-height: 40px;
-  color: #fff;
-  width: calc(100% / 3);
-}
-/* line 75, ../sass/screen.scss */
-.menus header ul li.active {
-  background-color: #6ba2d7;
-}
-/* line 81, ../sass/screen.scss */
-.menus aside {
-  float: left;
-  width: 50px;
-  box-sizing: border-box;
-  border-right: 1px solid #dedede;
-  height: calc(100% - 40px);
-  background-color: #f5f5f5;
-}
-/* line 88, ../sass/screen.scss */
-.menus aside ul {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-/* line 92, ../sass/screen.scss */
-.menus aside ul li {
-  padding: 12px 0;
-  font-size: 1.1rem;
-}
-/* line 95, ../sass/screen.scss */
-.menus aside ul li.active {
-  background-color: gainsboro;
-}
-/* line 101, ../sass/screen.scss */
-.menus .menusList {
-  float: left;
-  width: calc(100% - 50px);
-}
-/* line 105, ../sass/screen.scss */
-.menus .menusList ul {
-  margin: 0;
-  padding: 0;
-}
-/* line 108, ../sass/screen.scss */
-.menus .menusList ul li {
-  position: relative;
-  height: 100px;
-  padding: 16px 0;
-}
-/* line 112, ../sass/screen.scss */
-.menus .menusList ul li img {
-  margin-left: 16px;
-  width: 66px;
-  height: 66px;
-}
-/* line 117, ../sass/screen.scss */
-.menus .menusList ul li .dishname {
-  position: absolute;
-  margin: 0;
-  top: 16px;
-  left: 90px;
-  color: #6ba2d7;
-}
-/* line 125, ../sass/screen.scss */
-.menus .menusList ul li .dishinfo {
-  position: absolute;
-  margin: 0;
-  top: 42px;
-  left: 90px;
-  font-size: 0.8rem;
-}
-/* line 133, ../sass/screen.scss */
-.menus .menusList ul li .sales {
-  position: absolute;
-  margin: 0;
-  top: 62px;
-  left: 90px;
-  font-size: 0.8rem;
-}
-/* line 140, ../sass/screen.scss */
-.menus .menusList ul li .price {
-  position: absolute;
-  margin: 0;
-  top: 16px;
-  right: 16px;
-  color: #ff6000;
-}
-/* line 147, ../sass/screen.scss */
-.menus .menusList ul li .reduce {
-  position: absolute;
-  top: 60px;
-  right: 70px;
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/css/compass/reset/_utilities.scss */
+a img {
   border: none;
-  padding-top: 3px;
-  width: 25px;
-  border-radius: 50%;
-  height: 25px;
-  color: #fff;
-  background-color: #6ba2d7;
-  outline: none;
 }
-/* line 160, ../sass/screen.scss */
-.menus .menusList ul li .plus {
-  position: absolute;
-  top: 60px;
-  right: 16px;
-  border: none;
-  padding-top: 3px;
-  width: 25px;
-  border-radius: 50%;
-  height: 25px;
-  color: #fff;
-  background-color: #6ba2d7;
-  outline: none;
-}
-/* line 173, ../sass/screen.scss */
-.menus .menusList ul li .value {
-  position: absolute;
-  text-align: center;
-  top: 60px;
-  right: 41px;
-  width: 29px;
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/css/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
 }
