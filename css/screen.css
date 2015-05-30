@@ -301,3 +301,88 @@ body {
   width: calc(100% - 55px);
   color: #fff;
 }
+
+/* line 209, ../sass/screen.scss */
+.pop-panel {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px 20px 60px 20px;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+/* line 217, ../sass/screen.scss */
+.pop-panel .pop-ctn {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+/* line 223, ../sass/screen.scss */
+.pop-panel .pop-ctn img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+/* line 227, ../sass/screen.scss */
+.pop-panel .pop-ctn h2 {
+  padding: 10px;
+  color: #e28346;
+}
+/* line 231, ../sass/screen.scss */
+.pop-panel .pop-ctn p {
+  padding: 0 10px 10px 10px;
+  text-indent: 2em;
+  font-size: 14px;
+  line-height: 18px;
+}
+/* line 237, ../sass/screen.scss */
+.pop-panel .pop-ctn .ctrl {
+  position: relative;
+  padding: 10px;
+  width: 100%;
+}
+/* line 241, ../sass/screen.scss */
+.pop-panel .pop-ctn .ctrl div {
+  display: inline-block;
+}
+/* line 244, ../sass/screen.scss */
+.pop-panel .pop-ctn .ctrl .menus-price {
+  color: #e28346;
+}
+/* line 247, ../sass/screen.scss */
+.pop-panel .pop-ctn .ctrl .reduce, .pop-panel .pop-ctn .ctrl .add {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  background-color: #e28346;
+  color: #fff;
+  border-radius: 6px;
+}
+/* line 256, ../sass/screen.scss */
+.pop-panel .pop-ctn .ctrl .add {
+  bottom: 10px;
+  right: 25px;
+}
+/* line 260, ../sass/screen.scss */
+.pop-panel .pop-ctn .ctrl .reduce {
+  bottom: 10px;
+  right: 77px;
+}
+/* line 264, ../sass/screen.scss */
+.pop-panel .pop-ctn .ctrl .value {
+  position: absolute;
+  width: 30px;
+  height: 22px;
+  font-size: 1.1rem;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  right: 47px;
+  bottom: 10px;
+}

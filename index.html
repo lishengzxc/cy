@@ -146,8 +146,18 @@
                 </span>
             </div>
         </div>
-        <div class="pop">
-
+        <div class="pop-panel">
+            <div class="pop-ctn">
+                <img src="img/example.png" alt=""/>
+                <h2>一号菜</h2>
+                <p>一些描述和一些其他信息一些描述和一些其他信息一些描述和一些其他信息一些描述和一些其他信息一些描述和一些其他信息一些描述和一些其他信息一些描述和一些其他信息</p>
+                <div class="ctrl">
+                    <div class="menus-price">￥30.0</div>
+                    <div class="reduce">－</div>
+                    <div class="value">11</div>
+                    <div class="add">＋</div>
+                </div>
+            </div>
         </div>
         <div class="cart">
             <img src="img/cart.png" alt=""/>
@@ -158,7 +168,7 @@
     <script>
         $(document).ready(function() {
             $(".menus-item").on('click', function() {
-                alert(1);
+                $(".pop-panel").show();
             });
         });
     </script>
