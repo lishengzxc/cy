@@ -47,6 +47,11 @@ body {
       height: 100%;
       width: 65%;
       background-color: #f5f5f5;
+      .carousel-item {
+        img {
+          width: 100%;
+        }
+      }
       .carousel-title {
         position: absolute;
         bottom: 0;
@@ -141,6 +146,7 @@ body {
         @include textcenter(22px);
         background-color: $color;
         color: #fff;
+        border-radius: 6px;
       }
       .add {
         bottom: 10px;
