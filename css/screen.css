@@ -84,10 +84,11 @@ body {
 
 /* line 34, ../sass/screen.scss */
 .menus {
+  position: relative;
   width: 100%;
   height: 100%;
 }
-/* line 37, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 .menus .recommend {
   width: 100%;
   height: 140px;
@@ -97,7 +98,7 @@ body {
   border-radius: 6px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
-/* line 44, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .menus .recommend .carousel {
   position: relative;
   float: left;
@@ -106,10 +107,17 @@ body {
   background-color: #f5f5f5;
 }
 /* line 51, ../sass/screen.scss */
+.menus .recommend .carousel .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+/* line 54, ../sass/screen.scss */
 .menus .recommend .carousel .carousel-item img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-/* line 55, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 .menus .recommend .carousel .carousel-title {
   position: absolute;
   bottom: 0;
@@ -117,7 +125,7 @@ body {
   height: 40px;
   background-color: rgba(0, 0, 0, 0.7);
 }
-/* line 61, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .menus .recommend .carousel .carousel-title .dish-name {
   height: 40px;
   line-height: 40px;
@@ -125,7 +133,7 @@ body {
   padding-left: 15px;
   color: #fff;
 }
-/* line 68, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 .menus .recommend .add, .menus .recommend .overview {
   box-sizing: border-box;
   color: #e28272;
@@ -134,11 +142,11 @@ body {
   line-height: 50px;
   text-align: center;
 }
-/* line 74, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .menus .recommend .add {
   border-bottom: 1px solid #e28272;
 }
-/* line 77, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .menus .recommend .price {
   height: 40px;
   line-height: 40px;
@@ -147,24 +155,37 @@ body {
   background-color: #e28272;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 .classify {
   float: left;
-  width: 55px;
-  height: 200px;
+  width: 50px;
   clear: both;
   background-color: #e28272;
   border-radius: 6px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
+/* line 96, ../sass/screen.scss */
+.classify ul {
+  text-align: center;
+}
+/* line 98, ../sass/screen.scss */
+.classify ul li {
+  color: #fff;
+  padding: 15px;
+  border-bottom: 1px solid #fff;
+}
+/* line 102, ../sass/screen.scss */
+.classify ul li:last-child {
+  border-bottom: none;
+}
 
-/* line 94, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .menus-items-box {
-  margin-left: 63px;
+  margin-left: 58px;
   height: calc(100% - 156px);
   overflow: auto;
 }
-/* line 98, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .menus-items-box .menus-item {
   position: relative;
   width: 99.5%;
@@ -174,42 +195,43 @@ body {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   margin-bottom: 8px;
 }
-/* line 105, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 .menus-items-box .menus-item img {
   margin-left: 8px;
   margin-right: 2px;
   vertical-align: middle;
   width: 70px;
   height: 70px;
+  object-fit: cover;
   border-radius: 6px;
 }
-/* line 114, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .menus-items-box .menus-item span {
   vertical-align: middle;
   display: inline-block;
   height: 100%;
 }
-/* line 118, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 .menus-items-box .menus-item span .menus-name {
   margin-top: 15px;
   margin-bottom: 8px;
   font-size: 1.1rem;
   color: #e28272;
 }
-/* line 124, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .menus-items-box .menus-item span .menus-info {
   font-size: 0.7rem;
 }
-/* line 127, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .menus-items-box .menus-item span .sales-num {
   margin-top: 11px;
   font-size: 0.8rem;
 }
-/* line 132, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 .menus-items-box .menus-item .ctrl {
   margin-left: 5px;
 }
-/* line 135, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .menus-items-box .menus-item .ctrl .menus-price {
   position: absolute;
   top: 15px;
@@ -217,7 +239,7 @@ body {
   font-size: 1.1rem;
   color: #e28272;
 }
-/* line 142, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .menus-items-box .menus-item .ctrl .reduce, .menus-items-box .menus-item .ctrl .add {
   position: absolute;
   width: 22px;
@@ -229,17 +251,17 @@ body {
   color: #fff;
   border-radius: 6px;
 }
-/* line 151, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 .menus-items-box .menus-item .ctrl .add {
   bottom: 10px;
   right: 8px;
 }
-/* line 155, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 .menus-items-box .menus-item .ctrl .reduce {
   bottom: 10px;
   right: 60px;
 }
-/* line 159, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 .menus-items-box .menus-item .ctrl .value {
   position: absolute;
   width: 30px;
@@ -249,4 +271,33 @@ body {
   text-align: center;
   right: 30px;
   bottom: 10px;
+}
+
+/* line 186, ../sass/screen.scss */
+.cart {
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* line 193, ../sass/screen.scss */
+.cart img {
+  vertical-align: middle;
+  padding-left: 10px;
+  height: 30px;
+}
+/* line 198, ../sass/screen.scss */
+.cart span {
+  position: relative;
+  left: -20px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  height: 45px;
+  line-height: 45px;
+  text-align: right;
+  width: calc(100% - 55px);
+  color: #fff;
 }
