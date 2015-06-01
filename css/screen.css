@@ -184,7 +184,7 @@ body {
 .menus-items-box {
   margin-left: 58px;
   height: calc(100% - 156px);
-  overflow: auto;
+  overflow: scroll;
 }
 /* line 114, ../sass/screen.scss */
 .menus-items-box .menus-item {
