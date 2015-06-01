@@ -440,7 +440,7 @@ body {
 /* line 320, ../sass/screen.scss */
 .cart .cartList {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 69px);
   overflow: scroll;
 }
 /* line 324, ../sass/screen.scss */
@@ -451,22 +451,89 @@ body {
 }
 /* line 328, ../sass/screen.scss */
 .cart .cartList ul li {
+  position: relative;
+  display: block;
   width: 100%;
+  height: 80px;
   padding: 5px 0;
   border-bottom: 1px dashed #000;
 }
-/* line 332, ../sass/screen.scss */
+/* line 335, ../sass/screen.scss */
 .cart .cartList ul li:last-child {
   border-bottom: none;
 }
-/* line 335, ../sass/screen.scss */
+/* line 338, ../sass/screen.scss */
 .cart .cartList ul li img {
   width: 70px;
   height: 70px;
   border-radius: 6px;
+  vertical-align: middle;
   object-fit: cover;
 }
-/* line 344, ../sass/screen.scss */
+/* line 345, ../sass/screen.scss */
+.cart .cartList ul li span {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  margin-left: 5px;
+}
+/* line 350, ../sass/screen.scss */
+.cart .cartList ul li span .menus-name, .cart .cartList ul li span .menus-price {
+  padding-top: 18px;
+  font-size: 1.1rem;
+  color: #e28346;
+}
+/* line 355, ../sass/screen.scss */
+.cart .cartList ul li span .menus-info {
+  padding-top: 13px;
+  font-size: 0.7rem;
+}
+/* line 361, ../sass/screen.scss */
+.cart .cartList ul .ctrl {
+  margin-left: 5px;
+}
+/* line 364, ../sass/screen.scss */
+.cart .cartList ul .ctrl .menus-price {
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  font-size: 1.1rem;
+  color: #e28346;
+}
+/* line 371, ../sass/screen.scss */
+.cart .cartList ul .ctrl .reduce, .cart .cartList ul .ctrl .add {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  background-color: #e28346;
+  color: #fff;
+  border-radius: 6px;
+}
+/* line 380, ../sass/screen.scss */
+.cart .cartList ul .ctrl .add {
+  bottom: 10px;
+  right: 8px;
+}
+/* line 384, ../sass/screen.scss */
+.cart .cartList ul .ctrl .reduce {
+  bottom: 10px;
+  right: 60px;
+}
+/* line 388, ../sass/screen.scss */
+.cart .cartList ul .ctrl .value {
+  position: absolute;
+  width: 30px;
+  height: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  right: 30px;
+  bottom: 10px;
+}
+/* line 399, ../sass/screen.scss */
 .cart .cartFooter {
   height: 9px;
   background-image: url(../img/tr.png);
