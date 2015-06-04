@@ -1,0 +1,14 @@
+<li ng-controller="cartController" ng-repeat="x in dt">
+    <img src="img/example.png" alt=""/>
+        <span>
+            <div class="menus-name" ng-bind="x.name"></div>
+        </span>
+        <span>
+            <div class="menus-price">￥<span ng-bind="x.price"></span></div>
+        </span>
+    <div class="ctrl">
+        <div class="reduce">－</div>
+        <div class="value" ng-bind="x.num" ng-click="get()"></div>
+        <div class="add">＋</div>
+    </div>
+</li>

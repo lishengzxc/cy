@@ -32,7 +32,7 @@ body {
 }
 
 .menus {
-  display: none;
+//  display: none;
   position: relative;
   width: 100%;
   height: 100%;
@@ -110,7 +110,7 @@ body {
 .menus-items-box {
   margin-left: 50px + 8px;
   height: calc(100% - 156px);
-  overflow: scroll;
+  overflow-y: scroll;
   .menus-item {
     position: relative;
     width: 99.7%;
@@ -283,6 +283,7 @@ body {
 }
 
 .cart {
+  display: none;
   position: relative;
   width: 100%;
   height: 100%;
@@ -295,17 +296,17 @@ body {
     div {
       position: relative;
       width: 100%;
-      height: 41px;
+      height: 31px;
       .header {
         display: inline-block;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
         text-align: center;
         background-color: $color;
         img {
           padding: 7px 0;
-          width: 30px;
+          width: 20px;
         }
       }
       span {
@@ -313,14 +314,14 @@ body {
         margin-left: 10px;
         top: 0;
         bottom: 0;
-        line-height: 41px;
+        line-height: 31px;
       }
     }
   }
   .cartList {
     width: 100%;
     height: calc(100% - 69px);
-    overflow: scroll;
+    overflow-y: scroll;
     ul {
       padding: 0px 10px 10px 10px;
       box-sizing: border-box;
@@ -335,6 +336,9 @@ body {
         &:last-child {
           border-bottom: none;
         }
+        &:first-child {
+          border-top: 1px dashed #000;
+        }
         img {
           width: 70px;
           height: 70px;
@@ -347,27 +351,21 @@ body {
           vertical-align: middle;
           height: 100%;
           margin-left: 5px;
-          .menus-name, .menus-price {
-            padding-top: 18px;
+          .menus-name {
+            padding-top: 15px;
             font-size: 1.1rem;
             color: $color;
           }
-          .menus-info {
-            padding-top: 13px;
-            font-size: 0.7rem;
+          .menus-price {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            color: $color;
           }
         }
       }
       .ctrl {
-
         margin-left: 5px;
-        .menus-price {
-          position: absolute;
-          top: 15px;
-          right: 8px;
-          font-size: 1.1rem;
-          color: $color;
-        }
         .reduce, .add {
           position: absolute;
           width: 22px;
@@ -378,11 +376,11 @@ body {
           border-radius: 6px;
         }
         .add {
-          bottom: 10px;
+          bottom: 13px;
           right: 8px;
         }
         .reduce {
-          bottom: 10px;
+          bottom: 13px;
           right: 60px;
         }
         .value {
@@ -391,7 +389,7 @@ body {
           height: 22px;
           @include textcenter(22px);
           right: 30px;
-          bottom: 10px;
+          bottom: 13px;
         }
       }
     }
