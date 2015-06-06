@@ -107,10 +107,15 @@ body {
   }
 }
 
-.menus-items-box {
+.scorller {
   margin-left: 50px + 8px;
   height: calc(100% - 150px);
-  overflow-y: hidden;
+  overflow: hidden;
+.menus-items-box {
+//  -webkit-transition-duration: 0ms;
+//  transition-duration: 0ms;
+//  transform: translate(0px, 0px) translateZ(0px);
+//  -webkit-transform: translate(0px, 0px) translateZ(0px);
   .menus-item {
     position: relative;
     width: 99.7%;
@@ -183,6 +188,7 @@ body {
       }
     }
   }
+}
 }
 .addcart {
   position: absolute;

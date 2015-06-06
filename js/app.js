@@ -39,7 +39,21 @@ cy.directive('menusitemsbox', function() {
 	return {
 		restrice: 'E',
 		templateUrl: 'tpls/menus-items-box.html',
-		replace: true
+		replace: true,
+		link: function(s, e, a) {
+			var startY, endY;
+			e.bind('touchstart', function(e) {
+				var touch = e.touches[0];
+				startY = touch.pageY;
+				//console.log(startY);
+			});
+			e.bind('touchmove', function(e) {
+				var touch = e.touches[0];
+				endY = (startY - touch.pageY) * -1;
+				//console.log(endY);
+				console.log(document.getElementsByClassName('menus-items-box')[0].style.transform = 'translateY(' + endY + 'px)');
+			});
+		}
 	}
 });
 
