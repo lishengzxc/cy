@@ -315,9 +315,29 @@ body {
       }
     }
   }
+  .noitems {
+    margin: 15px auto;
+    width: 80%;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    text-align: center;
+    line-height: 2rem;
+    background-color: darken($color, 10%);
+    span {
+      font-size: 2rem;
+    }
+    .btn {
+      margin-top: 10px;
+      height: 44px;
+      line-height: 44px;
+      border-radius: 6px;
+      background-color: lighten($color, 20%);
+      box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    }
+  }
   .cartList {
     width: 100%;
-    overflow-y: scroll;
     ul {
       padding: 0px 10px 0px 10px;
       box-sizing: border-box;
@@ -409,6 +429,9 @@ nav {
       height: 35px;
       line-height: 35px;
       text-align: center;
+      &.active {
+        background-color: darken($color, 5%);
+      }
     }
   }
 }

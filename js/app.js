@@ -39,21 +39,7 @@ cy.directive('menusitemsbox', function() {
 	return {
 		restrice: 'E',
 		templateUrl: 'tpls/menus-items-box.html',
-		replace: true,
-		//link: function(s, e, a) {
-		//	var startY, endY;
-		//	e.bind('touchstart', function(e) {
-		//		var touch = e.touches[0];
-		//		startY = touch.pageY;
-		//		//console.log(startY);
-		//	});
-		//	e.bind('touchmove', function(e) {
-		//		var touch = e.touches[0];
-		//		endY = (startY - touch.pageY) * -1;
-		//		//console.log(endY);
-		//		console.log(document.getElementsByClassName('menus-items-box')[0].style.transform = 'translateY(' + endY + 'px)');
-		//	});
-		//}
+		replace: true
 	}
 });
 
@@ -95,18 +81,31 @@ cy.directive('poppanel', function () {
 
 cy.controller('cyController', ['$rootScope', function($rootScope) {
 
-	$rootScope.meunsDisplay = true;
-	$rootScope.cartDisplay = false;
+	$rootScope.meunsDisplay = false;
+	$rootScope.cartDisplay = true;
 
-	$rootScope.toCart = function($event) {
+	$rootScope.toCart = function() {
+
+		var a = document.querySelectorAll('.navitem');
+
+		for (var i in a) {
+			try {
+				a[i].classList.remove('active');
+			} catch (e) {
+				continue;
+			}
+		}
+
+		console.log(document.getElementById('cart').classList.add('active'));
+
 		this.meunsDisplay = false;
 		this.cartDisplay = true;
 
-		for (var i in this.resMenus) {
-			if (this.resMenus[i].num > 0) {
-				this.cartDate.push(this.resMenus[i]);
-			}
-		}
+		//for (var i in this.resMenus) {
+		//	if (this.resMenus[i].num > 0) {
+		//		this.cartDate.push(this.resMenus[i]);
+		//	}
+		//}
 	};
 
 	$rootScope.resMenus = [
@@ -115,7 +114,7 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 			name: '1号菜',
 			info: '一些其他信息',
 			sales: '99',
-			num: 1,
+			num: 0,
 			price: '40.0'
 		},
 		{
@@ -123,7 +122,7 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 			name: '2号菜',
 			info: '一些其他信息',
 			sales: '99',
-			num: 2,
+			num: 0,
 			price: '30.0'
 		},
 		{
@@ -342,7 +341,16 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 		$rootScope.totalPrice = 0;
 		this.x.num = num <= 0 ? num : num - 1;
 		this.count();
-
+		if (this.x.num === 0) {
+			var t = 0;
+			for (var i in $rootScope.resMenus) {
+				t += $rootScope.resMenus[i].num;
+			}
+			if (t === 0) {
+				// 显示用户购物车内没商品
+				console.log('no');
+			}
+		}
 	};
 
 	$rootScope.hidepop = function($event) {
@@ -391,9 +399,20 @@ cy.controller('popController', ['$scope', '$rootScope', function($rootScope, $sc
 }]);
 
 cy.controller('navController', ['$scope', '$rootScope', function($rootScope, $scope) {
-	$scope.toMenus = function ($event) {
-		this.meunsDisplay = true;
-		this.cartDisplay = false;
+	$scope.tonav = function ($event) {
+		document.getElementsByClassName('active')[0].classList.remove('active');
+		$event.target.classList.add('active');
+
+		switch ($event.target.innerHTML) {
+			case '菜单':
+				$rootScope.meunsDisplay = true;
+				$rootScope.cartDisplay = false;
+				break;
+			case '购物车':
+				$rootScope.meunsDisplay = false;
+				$rootScope.cartDisplay = true;
+				break
+		}
 	}
 }]);
 

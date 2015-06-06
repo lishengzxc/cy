@@ -1,8 +1,8 @@
 <nav ng-controller="navController">
-<ul>
-<li ng-click="toMenus($event)">菜单</li>
-<li ng-click="toCart($event)">购物车</li>
-<li>订单</li>
-<li>搜索</li>
+<ul ng-click="tonav($event)">
+<li id="menus" class="navitem active">菜单</li>
+<li id="cart" class="navitem">购物车</li>
+<li class="navitem">订单</li>
+<li class="navitem">搜索</li>
 </ul>
 </nav>
