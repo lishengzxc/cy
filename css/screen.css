@@ -183,7 +183,7 @@ body {
 .menus-items-box {
   margin-left: 58px;
   height: calc(100% - 150px);
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 /* line 114, ../sass/screen.scss */
 .menus-items-box .menus-item {

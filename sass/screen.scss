@@ -110,7 +110,7 @@ body {
 .menus-items-box {
   margin-left: 50px + 8px;
   height: calc(100% - 150px);
-  overflow-y: scroll;
+  overflow-y: hidden;
   .menus-item {
     position: relative;
     width: 99.7%;
