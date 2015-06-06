@@ -115,7 +115,7 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 			name: '1号菜',
 			info: '一些其他信息',
 			sales: '99',
-			num: 0,
+			num: 1,
 			price: '40.0'
 		},
 		{
@@ -123,7 +123,7 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 			name: '2号菜',
 			info: '一些其他信息',
 			sales: '99',
-			num: 0,
+			num: 2,
 			price: '30.0'
 		},
 		{

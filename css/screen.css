@@ -279,9 +279,9 @@ body {
 /* line 193, ../sass/screen.scss */
 .addcart {
   position: fixed;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   height: 45px;
   background-color: rgba(0, 0, 0, 0.7);
   text-align: right;
@@ -294,34 +294,36 @@ body {
 /* line 207, ../sass/screen.scss */
 .pop-panel {
   display: none;
-  position: absolute;
+  position: fixed;
   box-sizing: border-box;
   padding: 10px 10px 10px 10px;
-  top: -43px;
-  left: -8px;
-  right: -8px;
-  bottom: -8px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 23333;
   background-color: rgba(0, 0, 0, 0.7);
 }
-/* line 217, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .pop-panel .pop-ctn {
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
   background-color: #fff;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
 }
-/* line 223, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 .pop-panel .pop-ctn img {
   width: 100%;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
-/* line 227, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 .pop-panel .pop-ctn h2 {
   padding: 10px;
   color: #e28346;
 }
-/* line 231, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 .pop-panel .pop-ctn p {
   padding: 0 10px 10px 10px;
   margin-bottom: 20px;
@@ -329,24 +331,24 @@ body {
   font-size: 14px;
   line-height: 18px;
 }
-/* line 238, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl {
   position: relative;
   padding: 10px;
   width: 100%;
 }
-/* line 242, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl div {
   display: inline-block;
 }
-/* line 245, ../sass/screen.scss */
+/* line 247, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .menus-price {
   position: absolute;
   font-size: 1.2rem;
   bottom: 12px;
   color: #e28346;
 }
-/* line 251, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .reduce, .pop-panel .pop-ctn .ctrl .add {
   position: absolute;
   width: 22px;
@@ -358,17 +360,17 @@ body {
   color: #fff;
   border-radius: 6px;
 }
-/* line 260, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .add {
   bottom: 10px;
   right: 25px;
 }
-/* line 264, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .reduce {
   bottom: 10px;
   right: 77px;
 }
-/* line 268, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 .pop-panel .pop-ctn .ctrl .value {
   position: absolute;
   width: 30px;
@@ -381,15 +383,12 @@ body {
   bottom: 10px;
 }
 
-/* line 282, ../sass/screen.scss */
+/* line 284, ../sass/screen.scss */
 .cart {
-  position: relative;
+  padding-top: 35px;
   width: 100%;
-  height: calc(100% - 40px);
-  border-radius: 6px;
-  overflow: hidden;
 }
-/* line 288, ../sass/screen.scss */
+/* line 287, ../sass/screen.scss */
 .cart .cartListHead {
   width: 100%;
   padding: 10px;
@@ -397,13 +396,13 @@ body {
   background-color: #fff;
   border-radius: 6px 6px 0 0;
 }
-/* line 294, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 .cart .cartListHead div {
   position: relative;
   width: 100%;
   height: 31px;
 }
-/* line 298, ../sass/screen.scss */
+/* line 297, ../sass/screen.scss */
 .cart .cartListHead div .header {
   display: inline-block;
   width: 30px;
@@ -412,12 +411,12 @@ body {
   text-align: center;
   background-color: #e28346;
 }
-/* line 305, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 .cart .cartListHead div .header img {
   padding: 7px 0;
   width: 20px;
 }
-/* line 310, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 .cart .cartListHead div span {
   position: absolute;
   margin-left: 10px;
@@ -425,19 +424,18 @@ body {
   bottom: 0;
   line-height: 31px;
 }
-/* line 319, ../sass/screen.scss */
+/* line 318, ../sass/screen.scss */
 .cart .cartList {
   width: 100%;
-  height: calc(100% - 50px);
   overflow-y: scroll;
 }
-/* line 323, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 .cart .cartList ul {
-  padding: 0px 10px 10px 10px;
+  padding: 0px 10px 0px 10px;
   box-sizing: border-box;
   background-color: #fff;
 }
-/* line 327, ../sass/screen.scss */
+/* line 325, ../sass/screen.scss */
 .cart .cartList ul li {
   position: relative;
   display: block;
@@ -446,15 +444,11 @@ body {
   padding: 5px 0;
   border-bottom: 1px dashed #000;
 }
-/* line 334, ../sass/screen.scss */
+/* line 332, ../sass/screen.scss */
 .cart .cartList ul li:last-child {
   border-bottom: none;
 }
-/* line 337, ../sass/screen.scss */
-.cart .cartList ul li:first-child {
-  border-top: 1px dashed #000;
-}
-/* line 340, ../sass/screen.scss */
+/* line 335, ../sass/screen.scss */
 .cart .cartList ul li img {
   width: 70px;
   height: 70px;
@@ -462,32 +456,33 @@ body {
   vertical-align: middle;
   object-fit: cover;
 }
-/* line 347, ../sass/screen.scss */
+/* line 342, ../sass/screen.scss */
 .cart .cartList ul li span {
   display: inline-block;
   vertical-align: middle;
   height: 100%;
   margin-left: 5px;
 }
-/* line 352, ../sass/screen.scss */
+/* line 347, ../sass/screen.scss */
 .cart .cartList ul li span .menus-name {
   padding-top: 15px;
   font-size: 1.1rem;
   color: #e28346;
 }
-/* line 357, ../sass/screen.scss */
+/* line 352, ../sass/screen.scss */
 .cart .cartList ul li span .menus-price {
   position: absolute;
   right: 10px;
   top: 20px;
   color: #e28346;
 }
-/* line 365, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .cart .cartList ul .ctrl {
   margin-left: 5px;
 }
-/* line 367, ../sass/screen.scss */
+/* line 362, ../sass/screen.scss */
 .cart .cartList ul .ctrl .reduce, .cart .cartList ul .ctrl .add {
+  padding-top: 0;
   position: absolute;
   width: 22px;
   height: 22px;
@@ -498,17 +493,17 @@ body {
   color: #fff;
   border-radius: 6px;
 }
-/* line 376, ../sass/screen.scss */
+/* line 372, ../sass/screen.scss */
 .cart .cartList ul .ctrl .add {
   bottom: 13px;
   right: 8px;
 }
-/* line 380, ../sass/screen.scss */
+/* line 376, ../sass/screen.scss */
 .cart .cartList ul .ctrl .reduce {
   bottom: 13px;
   right: 60px;
 }
-/* line 384, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 .cart .cartList ul .ctrl .value {
   position: absolute;
   width: 30px;
@@ -519,26 +514,26 @@ body {
   right: 30px;
   bottom: 13px;
 }
-/* line 395, ../sass/screen.scss */
+/* line 391, ../sass/screen.scss */
 .cart .cartFooter {
   height: 9px;
   background-image: url(../img/tr.png);
 }
 
-/* line 401, ../sass/screen.scss */
+/* line 397, ../sass/screen.scss */
 nav {
   position: fixed;
   width: 100%;
   z-index: 2333;
 }
-/* line 405, ../sass/screen.scss */
+/* line 401, ../sass/screen.scss */
 nav ul {
   width: 100%;
   overflow: hidden;
   background-color: #e28346;
   color: #fff;
 }
-/* line 410, ../sass/screen.scss */
+/* line 406, ../sass/screen.scss */
 nav ul li {
   float: left;
   width: 25%;
