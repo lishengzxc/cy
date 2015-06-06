@@ -151,6 +151,126 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 			sales: '99',
 			num: 0,
 			price: '50.0'
+		},
+		{
+			id: 8,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 9,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 10,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 11,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 12,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 13,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 14,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 15,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 16,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 17,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 18,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 19,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 20,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 21,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
+		},
+		{
+			id: 22,
+			name: 'dsfdfv',
+			info: '一些其他信息',
+			sales: '99',
+			num: 0,
+			price: '50.0'
 		}
 	];
 	$rootScope.cartDate = [];
