@@ -81,8 +81,9 @@ cy.directive('poppanel', function () {
 
 cy.controller('cyController', ['$rootScope', function($rootScope) {
 
-	$rootScope.meunsDisplay = false;
-	$rootScope.cartDisplay = true;
+	$rootScope.meunsDisplay = true;
+	$rootScope.cartDisplay = false;
+	$rootScope.noitemsDisplay = true;
 
 	$rootScope.toCart = function() {
 
@@ -96,16 +97,17 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 			}
 		}
 
-		console.log(document.getElementById('cart').classList.add('active'));
+		document.getElementById('cart').classList.add('active');
 
 		this.meunsDisplay = false;
 		this.cartDisplay = true;
+	};
 
-		//for (var i in this.resMenus) {
-		//	if (this.resMenus[i].num > 0) {
-		//		this.cartDate.push(this.resMenus[i]);
-		//	}
-		//}
+	$rootScope.toMenus = function($event) {
+		document.getElementById('menus').classList.add('active');
+		document.getElementById('cart').classList.remove('active');
+		this.meunsDisplay = true;
+		this.cartDisplay = false;
 	};
 
 	$rootScope.resMenus = [
@@ -332,6 +334,7 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 		$rootScope.totalPrice = 0;
 		this.x.num = num >= 99 ? num : num + 1;
 		this.count();
+		$rootScope.noitemsDisplay = false;
 	};
 
 	$rootScope.reduce = function($event) {
@@ -347,7 +350,7 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 				t += $rootScope.resMenus[i].num;
 			}
 			if (t === 0) {
-				// 显示用户购物车内没商品
+				$rootScope.noitemsDisplay = true;
 				console.log('no');
 			}
 		}
