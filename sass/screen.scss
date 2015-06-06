@@ -35,7 +35,7 @@ body {
 //  display: none;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 35px);
   .recommend {
     width: 100%;
     height: 140px;
@@ -109,7 +109,7 @@ body {
 
 .menus-items-box {
   margin-left: 50px + 8px;
-  height: calc(100% - 156px);
+  height: calc(100% - 150px);
   overflow-y: scroll;
   .menus-item {
     position: relative;
@@ -191,28 +191,19 @@ body {
   bottom: -8px;
   height: 45px;
   background-color: rgba(0, 0, 0, 0.7);
-  img {
-    vertical-align: middle;
-    padding-left: 10px;
-    height: 30px;
-  }
-  span {
-    position: relative;
-    left: -20px;
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-    @include textcenter(45px, right);
-    width: calc(100% - 55px);
-    color: #fff;
-  }
+  text-align: right;
+  line-height: 45px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  color: #fff;
+
 }
 .pop-panel {
   display: none;
   position: absolute;
   box-sizing: border-box;
   padding: 10px 10px 10px 10px;
-  top: -8px;
+  top: -43px;
   left: -8px;
   right: -8px;
   bottom: -8px;
@@ -283,16 +274,17 @@ body {
 }
 
 .cart {
-  display: none;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 40px);
+  border-radius: 6px;
   overflow: hidden;
   .cartListHead {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
     background-color: #fff;
+    border-radius: 6px 6px 0 0;
     div {
       position: relative;
       width: 100%;
@@ -320,7 +312,7 @@ body {
   }
   .cartList {
     width: 100%;
-    height: calc(100% - 69px);
+    height: calc(100% - 50px);
     overflow-y: scroll;
     ul {
       padding: 0px 10px 10px 10px;
@@ -397,6 +389,24 @@ body {
   .cartFooter {
     height: 9px;
     background-image: url(../img/tr.png);
+  }
+}
+
+nav {
+  ul {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5px;
+    background-color: $color;
+    border-radius: 6px;
+    color: #fff;
+    li {
+      float: left;
+      width: 25%;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+    }
   }
 }
 

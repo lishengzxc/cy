@@ -5,9 +5,9 @@
         <p>{{popDate.info}}</p>
         <div class="ctrl">
             <div class="menus-price">￥{{popDate.price}}</div>
-            <div class="reduce">－</div>
+            <div class="reduce" ng-click="popReduce($event)">－</div>
             <div class="value">{{popDate.num}}</div>
-            <div class="add">＋</div>
+            <div class="add" ng-click="popAdd($event)">＋</div>
         </div>
     </div>
 </div>
