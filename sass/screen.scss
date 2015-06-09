@@ -284,6 +284,97 @@ body {
 .cart {
   padding-top: 35px;
   width: 100%;
+
+  .cartRecommend {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 125px;
+    background-color: #fff;
+    .index {
+      position: fixed;
+      bottom: 0;
+
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      span {
+        display: inline-block;
+        height: 7px;
+        width: 7px;
+        background-color: $color;
+        border-radius: 50%;
+        &.current {
+          background-color: darken($color, 20%);
+        }
+      }
+    }
+    &::before {
+      padding-top: 5px;
+      padding-left: 10px;
+      display: block;
+      content: '猜你喜欢';
+      color: grey;
+      font-size: 12px;
+    }
+    .recommendItem {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 17px;
+      padding: 5px 10px 0 10px;
+      height: 70px;
+      dl {
+        dt {
+          img {
+            float: left;
+            width: 70px;
+            height: 70px;
+            border-radius: 6px;
+          }
+          .itemName {
+            margin-left: 85px;
+            font-size: 1.2rem;
+            color: $color;
+          }
+
+        }
+        dd {
+          .itemInfo {
+            width: 140px;
+            text-indent: 1em;
+            margin-left: 85px;
+            margin-top: 15px;
+            color: grey;
+            line-height: 1.5em;
+            font-size: 0.7rem;
+          }
+          .itemPrice {
+            position: absolute;
+            color: $color;
+            top: 12px;
+            right: 15px;
+          }
+        }
+      }
+      .btn_plus {
+        position: absolute;
+
+        bottom: 0px;
+        right: 10px;
+        width: 60px;
+        height: 40px;
+        border-radius: 6px;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        background-color: $color;
+      }
+    }
+  }
+
   .cartListHead {
     width: 100%;
     padding: 10px;
@@ -316,7 +407,7 @@ body {
     }
   }
   .noitems {
-    margin: 15px auto;
+    margin: -30px auto 0 auto;
     width: 80%;
     padding: 10px;
     border-radius: 6px;
@@ -336,8 +427,9 @@ body {
       box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
     }
   }
+
   .cartList {
-    width: 100%;
+    padding-bottom: 130px;
     ul {
       padding: 0px 10px 0px 10px;
       box-sizing: border-box;
@@ -349,9 +441,7 @@ body {
         height: 80px;
         padding: 5px 0;
         border-bottom: 1px dashed #000;
-        &:last-child {
-          border-bottom: none;
-        }
+
         img {
           width: 70px;
           height: 70px;
@@ -377,6 +467,7 @@ body {
           }
         }
       }
+
       .ctrl {
         margin-left: 5px;
         .reduce, .add {
@@ -407,6 +498,39 @@ body {
         }
       }
     }
+    .submit {
+      position: relative;
+
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      background-color: #fff;
+      div {
+        padding-left: 15px;
+        .totalPrice {
+
+        }
+        .totalNum {
+
+        }
+        button {
+          position: absolute;
+          right: 15px;
+          top: 10px;
+          border-radius: 6px;
+          font-size: 17px;
+          border: none;
+          padding: 0;
+          text-align: center;
+          color: #fff;
+          background-color: $color;
+          width: 60px;
+          height: 30px;
+          line-height: 30px;
+        }
+      }
+
+    }
   }
   .cartFooter {
     height: 9px;
@@ -436,3 +560,122 @@ nav {
   }
 }
 
+.order {
+  position: absolute;
+  top: 40px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+/* Default animation - slide, you can visit 'src/mobilebone.aniamte.css' to get more styles of animation */
+.slide.in {
+  -webkit-animation-name: slideinfromright;
+  animation-name: slideinfromright;
+}
+.slide.out {
+  -webkit-animation-name: slideouttoleft;
+  animation-name: slideouttoleft;
+}
+.slide.reverse.out {
+  -webkit-animation-name: slideouttoright;
+  animation-name: slideouttoright;
+}
+.slide.reverse.in {
+  -webkit-animation-name: slideinfromleft;
+  animation-name: slideinfromleft;
+}
+
+/* keyframes for slidein from sides */
+@-webkit-keyframes slideinfromright {
+  from { -webkit-transform: translate3d(100%,0,0); }
+  to { -webkit-transform: translate3d(0,0,0); }
+}
+@keyframes slideinfromright {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+@-webkit-keyframes slideinfromleft {
+  from { -webkit-transform: translate3d(-100%,0,0); }
+  to { -webkit-transform: translate3d(0,0,0); }
+}
+@keyframes slideinfromleft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+/* keyframes for slideout to sides */
+@-webkit-keyframes slideouttoleft {
+  from { -webkit-transform: translate3d(0,0,0); }
+  to { -webkit-transform: translate3d(-100%,0,0); }
+}
+@keyframes slideouttoleft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+@-webkit-keyframes slideouttoright {
+  from { -webkit-transform: translate3d(0,0,0); }
+  to { -webkit-transform: translate3d(100%,0,0); }
+}
+@keyframes slideouttoright {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+/* chrysanthemum loading effect */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.recommendItem {
+
+}
+
+.out {
+  display: none;
+}
+
+.in, .out {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.in {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 350ms;
+  animation-timing-function: ease-in;
+  animation-duration: 350ms;
+}
+.out {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 350ms;
+  animation-timing-function: ease-in;
+  animation-duration: 350ms;
+}.out {
+   display: none;
+ }
+
+.in, .out {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.in {
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 350ms;
+  animation-timing-function: ease-out;
+  animation-duration: 350ms;
+}
+.out {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 350ms;
+  animation-timing-function: ease-in;
+  animation-duration: 350ms;
+}

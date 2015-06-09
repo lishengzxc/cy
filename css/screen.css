@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -388,7 +389,98 @@ body {
   padding-top: 35px;
   width: 100%;
 }
-/* line 287, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
+.cart .cartRecommend {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 125px;
+  background-color: #fff;
+}
+/* line 295, ../sass/screen.scss */
+.cart .cartRecommend .index {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+/* line 303, ../sass/screen.scss */
+.cart .cartRecommend .index span {
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  background-color: #e28346;
+  border-radius: 50%;
+}
+/* line 309, ../sass/screen.scss */
+.cart .cartRecommend .index span.current {
+  background-color: #a8521a;
+}
+/* line 314, ../sass/screen.scss */
+.cart .cartRecommend::before {
+  padding-top: 5px;
+  padding-left: 10px;
+  display: block;
+  content: '猜你喜欢';
+  color: grey;
+  font-size: 12px;
+}
+/* line 322, ../sass/screen.scss */
+.cart .cartRecommend .recommendItem {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 17px;
+  padding: 5px 10px 0 10px;
+  height: 70px;
+}
+/* line 331, ../sass/screen.scss */
+.cart .cartRecommend .recommendItem dl dt img {
+  float: left;
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+}
+/* line 337, ../sass/screen.scss */
+.cart .cartRecommend .recommendItem dl dt .itemName {
+  margin-left: 85px;
+  font-size: 1.2rem;
+  color: #e28346;
+}
+/* line 345, ../sass/screen.scss */
+.cart .cartRecommend .recommendItem dl dd .itemInfo {
+  width: 140px;
+  text-indent: 1em;
+  margin-left: 85px;
+  margin-top: 15px;
+  color: grey;
+  line-height: 1.5em;
+  font-size: 0.7rem;
+}
+/* line 354, ../sass/screen.scss */
+.cart .cartRecommend .recommendItem dl dd .itemPrice {
+  position: absolute;
+  color: #e28346;
+  top: 12px;
+  right: 15px;
+}
+/* line 362, ../sass/screen.scss */
+.cart .cartRecommend .recommendItem .btn_plus {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  width: 60px;
+  height: 40px;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  background-color: #e28346;
+}
+/* line 378, ../sass/screen.scss */
 .cart .cartListHead {
   width: 100%;
   padding: 10px;
@@ -396,13 +488,13 @@ body {
   background-color: #fff;
   border-radius: 6px 6px 0 0;
 }
-/* line 293, ../sass/screen.scss */
+/* line 384, ../sass/screen.scss */
 .cart .cartListHead div {
   position: relative;
   width: 100%;
   height: 31px;
 }
-/* line 297, ../sass/screen.scss */
+/* line 388, ../sass/screen.scss */
 .cart .cartListHead div .header {
   display: inline-block;
   width: 30px;
@@ -411,12 +503,12 @@ body {
   text-align: center;
   background-color: #e28346;
 }
-/* line 304, ../sass/screen.scss */
+/* line 395, ../sass/screen.scss */
 .cart .cartListHead div .header img {
   padding: 7px 0;
   width: 20px;
 }
-/* line 309, ../sass/screen.scss */
+/* line 400, ../sass/screen.scss */
 .cart .cartListHead div span {
   position: absolute;
   margin-left: 10px;
@@ -424,9 +516,9 @@ body {
   bottom: 0;
   line-height: 31px;
 }
-/* line 318, ../sass/screen.scss */
+/* line 409, ../sass/screen.scss */
 .cart .noitems {
-  margin: 15px auto;
+  margin: -30px auto 0 auto;
   width: 80%;
   padding: 10px;
   border-radius: 6px;
@@ -435,11 +527,11 @@ body {
   line-height: 2rem;
   background-color: #d46721;
 }
-/* line 327, ../sass/screen.scss */
+/* line 418, ../sass/screen.scss */
 .cart .noitems span {
   font-size: 2rem;
 }
-/* line 330, ../sass/screen.scss */
+/* line 421, ../sass/screen.scss */
 .cart .noitems .btn {
   margin-top: 10px;
   height: 44px;
@@ -448,17 +540,17 @@ body {
   background-color: #f0be9e;
   box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
 }
-/* line 339, ../sass/screen.scss */
+/* line 431, ../sass/screen.scss */
 .cart .cartList {
-  width: 100%;
+  padding-bottom: 130px;
 }
-/* line 341, ../sass/screen.scss */
+/* line 433, ../sass/screen.scss */
 .cart .cartList ul {
   padding: 0px 10px 0px 10px;
   box-sizing: border-box;
   background-color: #fff;
 }
-/* line 345, ../sass/screen.scss */
+/* line 437, ../sass/screen.scss */
 .cart .cartList ul li {
   position: relative;
   display: block;
@@ -467,11 +559,7 @@ body {
   padding: 5px 0;
   border-bottom: 1px dashed #000;
 }
-/* line 352, ../sass/screen.scss */
-.cart .cartList ul li:last-child {
-  border-bottom: none;
-}
-/* line 355, ../sass/screen.scss */
+/* line 445, ../sass/screen.scss */
 .cart .cartList ul li img {
   width: 70px;
   height: 70px;
@@ -479,31 +567,31 @@ body {
   vertical-align: middle;
   object-fit: cover;
 }
-/* line 362, ../sass/screen.scss */
+/* line 452, ../sass/screen.scss */
 .cart .cartList ul li span {
   display: inline-block;
   vertical-align: middle;
   height: 100%;
   margin-left: 5px;
 }
-/* line 367, ../sass/screen.scss */
+/* line 457, ../sass/screen.scss */
 .cart .cartList ul li span .menus-name {
   padding-top: 15px;
   font-size: 1.1rem;
   color: #e28346;
 }
-/* line 372, ../sass/screen.scss */
+/* line 462, ../sass/screen.scss */
 .cart .cartList ul li span .menus-price {
   position: absolute;
   right: 10px;
   top: 20px;
   color: #e28346;
 }
-/* line 380, ../sass/screen.scss */
+/* line 471, ../sass/screen.scss */
 .cart .cartList ul .ctrl {
   margin-left: 5px;
 }
-/* line 382, ../sass/screen.scss */
+/* line 473, ../sass/screen.scss */
 .cart .cartList ul .ctrl .reduce, .cart .cartList ul .ctrl .add {
   padding-top: 0;
   position: absolute;
@@ -516,17 +604,17 @@ body {
   color: #fff;
   border-radius: 6px;
 }
-/* line 392, ../sass/screen.scss */
+/* line 483, ../sass/screen.scss */
 .cart .cartList ul .ctrl .add {
   bottom: 13px;
   right: 8px;
 }
-/* line 396, ../sass/screen.scss */
+/* line 487, ../sass/screen.scss */
 .cart .cartList ul .ctrl .reduce {
   bottom: 13px;
   right: 60px;
 }
-/* line 400, ../sass/screen.scss */
+/* line 491, ../sass/screen.scss */
 .cart .cartList ul .ctrl .value {
   position: absolute;
   width: 30px;
@@ -537,26 +625,54 @@ body {
   right: 30px;
   bottom: 13px;
 }
-/* line 411, ../sass/screen.scss */
+/* line 501, ../sass/screen.scss */
+.cart .cartList .submit {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #fff;
+}
+/* line 508, ../sass/screen.scss */
+.cart .cartList .submit div {
+  padding-left: 15px;
+}
+/* line 516, ../sass/screen.scss */
+.cart .cartList .submit div button {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  border-radius: 6px;
+  font-size: 17px;
+  border: none;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  background-color: #e28346;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+}
+/* line 535, ../sass/screen.scss */
 .cart .cartFooter {
   height: 9px;
   background-image: url(../img/tr.png);
 }
 
-/* line 417, ../sass/screen.scss */
+/* line 541, ../sass/screen.scss */
 nav {
   position: fixed;
   width: 100%;
   z-index: 2333;
 }
-/* line 421, ../sass/screen.scss */
+/* line 545, ../sass/screen.scss */
 nav ul {
   width: 100%;
   overflow: hidden;
   background-color: #e28346;
   color: #fff;
 }
-/* line 426, ../sass/screen.scss */
+/* line 550, ../sass/screen.scss */
 nav ul li {
   float: left;
   width: 25%;
@@ -564,7 +680,181 @@ nav ul li {
   line-height: 35px;
   text-align: center;
 }
-/* line 432, ../sass/screen.scss */
+/* line 556, ../sass/screen.scss */
 nav ul li.active {
   background-color: #df7430;
+}
+
+/* line 563, ../sass/screen.scss */
+.order {
+  position: absolute;
+  top: 40px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+/* Default animation - slide, you can visit 'src/mobilebone.aniamte.css' to get more styles of animation */
+/* line 575, ../sass/screen.scss */
+.slide.in {
+  -webkit-animation-name: slideinfromright;
+  animation-name: slideinfromright;
+}
+
+/* line 579, ../sass/screen.scss */
+.slide.out {
+  -webkit-animation-name: slideouttoleft;
+  animation-name: slideouttoleft;
+}
+
+/* line 583, ../sass/screen.scss */
+.slide.reverse.out {
+  -webkit-animation-name: slideouttoright;
+  animation-name: slideouttoright;
+}
+
+/* line 587, ../sass/screen.scss */
+.slide.reverse.in {
+  -webkit-animation-name: slideinfromleft;
+  animation-name: slideinfromleft;
+}
+
+/* keyframes for slidein from sides */
+@-webkit-keyframes slideinfromright {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideinfromright {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideinfromleft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideinfromleft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* keyframes for slideout to sides */
+@-webkit-keyframes slideouttoleft {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes slideouttoleft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes slideouttoright {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes slideouttoright {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+/* chrysanthemum loading effect */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* line 641, ../sass/screen.scss */
+.out {
+  display: none;
+}
+
+/* line 645, ../sass/screen.scss */
+.in, .out {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 650, ../sass/screen.scss */
+.in {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 350ms;
+  animation-timing-function: ease-in;
+  animation-duration: 350ms;
+}
+
+/* line 656, ../sass/screen.scss */
+.out {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 350ms;
+  animation-timing-function: ease-in;
+  animation-duration: 350ms;
+}
+
+/* line 661, ../sass/screen.scss */
+.out {
+  display: none;
+}
+
+/* line 665, ../sass/screen.scss */
+.in, .out {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 670, ../sass/screen.scss */
+.in {
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 350ms;
+  animation-timing-function: ease-out;
+  animation-duration: 350ms;
+}
+
+/* line 676, ../sass/screen.scss */
+.out {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 350ms;
+  animation-timing-function: ease-in;
+  animation-duration: 350ms;
 }

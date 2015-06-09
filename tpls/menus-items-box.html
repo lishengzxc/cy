@@ -1,18 +1,19 @@
 <div class="scorller">
-<ul class="menus-items-box">
-    <li class="menus-item"  ng-controller="menusController" ng-repeat="x in resMenus"  ng-click="pop($event)">
-        <img src="img/example.png" alt=""  >
-    <span >
-        <div class="menus-name" ng-bind="x.name" ></div>
-        <div class="menus-info" ng-bind="x.info" ></div>
-        <div class="sales-num" >销量：<span ng-bind="x.sales" ></span></div>
+    <ul class="menus-items-box">
+        <li class="menus-item" ng-controller="menusController" ng-if="x.type == nowClassify" ng-repeat="x in resMenus"
+            ng-click="pop($event)" data-typeid="{{x.type}}">
+            <img src="img/example.png" alt="">
+    <span>
+        <div class="menus-name" ng-bind="x.name"></div>
+        <div class="menus-info" ng-bind="x.info"></div>
+        <div class="sales-num">销量：<span ng-bind="x.sales"></span></div>
     </span>
-    <span class="ctrl" >
-        <div class="menus-price" >￥<span  ng-bind="x.price"></span></div>
+    <span class="ctrl">
+        <div class="menus-price">￥<span ng-bind="x.price"></span></div>
         <div class="reduce" ng-click="reduce($event)">－</div>
         <div class="value" ng-bind="x.num"></div>
         <div class="add" ng-click="add($event)">＋</div>
     </span>
-    </li>
-</ul>
+        </li>
+    </ul>
 </div>

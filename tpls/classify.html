@@ -1,9 +1,5 @@
 <div class="classify">
-<ul>
-<li>全</li>
-<li>热</li>
-<li>冷</li>
-<li>饮</li>
-<li>它</li>
-</ul>
+    <ul ng-click="jumpSomeClass($event)">
+        <li ng-repeat="x in classifySets" id="{{x.typeid}}">{{x.typename}}</li>
+    </ul>
 </div>

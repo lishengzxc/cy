@@ -1,11 +1,17 @@
 <div class="cart" ng-show="cartDisplay">
-<div class="cartList">
-<ul>
-<cartliest></cartliest>
-</ul>
-</div>
-    <div class="noitems" ng-show="noitemsDisplay"><span class="yi">咦？</span>你的购物车里没有菜哦~
-    <br>快去点一些吧！
-    <div class="btn" ng-click="toMenus($event)">去点菜</div>
+    <div class="cartList">
+        <ul>
+            <cartliest></cartliest>
+        </ul>
+        <div class="submit" ng-hide="noitemsDisplay">
+            <div>共 <span>{{totalNum}}</span> 份 / <span>{{totalPrice}}</span> 元
+            <button>提交</button>
+            </div>
+        </div>
     </div>
+    <div class="noitems" ng-show="noitemsDisplay"><span class="yi">咦？</span>你的购物车里没有菜哦~
+        <br>快去点一些吧！
+        <div class="btn" ng-click="toMenus($event)">去点菜</div>
+    </div>
+    <cartrecommend></cartrecommend>
 </div>

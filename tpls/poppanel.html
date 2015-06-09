@@ -1,8 +1,11 @@
 <div class="pop-panel" ng-controller="popController">
     <div class="pop-ctn">
         <img src="img/example.png" alt=""/>
+
         <h2>{{popDate.name}}</h2>
+
         <p>{{popDate.info}}</p>
+
         <div class="ctrl">
             <div class="menus-price">￥{{popDate.price}}</div>
             <div class="reduce" ng-click="popReduce($event)">－</div>
