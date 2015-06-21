@@ -1,7 +1,11 @@
 /**
  * Created by lisheng on 15/6/5.
  */
-var cy = angular.module("cy", []);
+var cy = angular.module("cy", ['ngTouch']);
+
+
+
+
 
 cy.directive('menusnav', function () {
 	return {
@@ -39,7 +43,10 @@ cy.directive('menusitemsbox', function() {
 	return {
 		restrice: 'E',
 		templateUrl: 'tpls/menus-items-box.html',
-		replace: true
+		replace: true,
+		link: function(s, e, a, c) {
+			//console.log(e[0].children[0].children);
+		}
 	}
 });
 
@@ -89,155 +96,162 @@ cy.directive('cartrecommend', function() {
 		templateUrl: 'tpls/cart_recommend.html',
 		replace: true,
 		link: function(s, e, a, c) {
-			// 左右侧滑效果
-			e[0].children[0].style.display = 'block';
-			for (var i = 1; i < e[0].children.length - 1; i++) {
-				e[0].children[i].style.display = 'none';
-			}
-			var index = 0;
-			var animationFlag = true;
-			var startX = 0;
-			var direction = 'left';
+			//setTimeout(function() {
+			//	console.log(e[0].children);
+			//}, 1);
 
-			var slideStep1 = function(index, s, d) {
-				s[index].style.display = 'block';
-				if (d === 'left') {
-					s[index].classList.add('slide', 'out');
-					if (index !== s.length - 2) {
-						s[index + 1].style.display = 'block';
-						s[index + 1].classList.add('in', 'slide');
-					} else {
-						s[0].style.display = 'block';
-						s[0].classList.add('in', 'slide');
-					}
-				} else {
-					s[index].classList.add('slide', 'out', 'reverse');
-					if (index !== 0) {
-						s[index - 1].style.display = 'block';
-						s[index - 1].classList.remove('out');
-						s[index - 1].classList.add('in', 'slide', 'reverse');
-					} else {
-						s[s.length - 2].style.display = 'block';
-						s[s.length - 2].classList.remove('out');
-						s[s.length - 2].classList.add('in', 'slide', 'reverse');
-					}
-				}
-			};
-
-			var slideStpe2 = function(index, s, d) {
-				//s[index].classList.remove('slide', 'reverse');
-				s[index].classList.remove('slide', 'out');
-				s[index].style.display = 'none';
-				s[index + 1].classList.remove('slide', 'in');
-				s[index + 1].style.display = 'block';
-
-				if (d === 'left') {
-					if (index !== s.length - 2) {
-						s[index + 1].classList.remove('slide');
-					} else {
-						s[0].classList.remove('slide');
-					}
-				} else {
-					if (index !== 0) {
-						s[index - 1].classList.remove('slide', 'reverse');
-					} else {
-						s[s.length - 2].classList.remove('slide', 'reverse');
-					}
-				}
-			};
-
-			var moveIndex = function(index, s, d) {
-				s[s.length - 1].children[index].classList.remove('current');
-				if (d === 'left') {
-					var ti = index === s.length - 2 ? 0 : index + 1;
-					s[s.length - 1].children[ti].classList.add('current');
-				} else {
-					var ti = index === 0 ? s.length - 2 : index - 1;
-					s[s.length - 1].children[ti].classList.add('current');
-				}
-			};
-
-			var slide = function(event) {
-				if (!event) {
-					direction = 'left';
-				} else {
-					if (startX - event.touches[0].pageX > 0) {
-						direction = 'left'
-					} else {
-						direction = 'right'
-					}
-				}
-				if (animationFlag) {
-					animationFlag = false;
-					var s = e[0].children;
-					index = 0;
-					for (var i = 0; i < s.length - 1; i++) {
-						if (s[i].classList.contains('in')) {
-							index = i;
-							break;
-						}
-					}
-					slideStep1(index, s, direction);
-					setTimeout(function() {
-						slideStpe2(index, s, direction);
-						moveIndex(index, s, direction);
-						animationFlag = true;
-					}, 350);
-				}
-			};
-			e.on('touchstart', function(event) {
-				startX = event.touches[0].pageX;
-			});
-			e.on('touchmove', slide);
-			//e.on('webkitAnimationEnd', function(event) {
-			//	var s = e[0].children;
-			//	slideStpe2(index, s, direction);
-			//	moveIndex(index, s, direction);
-			//	animationFlag = true;
-			//});
-			//e.on('animationend', function(event) {
-			//	var s = e[0].children;
-			//	slideStpe2(index, s, direction);
-			//	moveIndex(index, s, direction);
-			//	animationFlag = true;
-			//});
-			setInterval(slide, 2000);
-
-			// 点击添加
-
+			setInterval(function() {
+				s.left()
+			}, 5000);
+			//console.log(e.contents());
+			//e.on('click', function(event) {
+			//	console.log(event.target.getAttribute('data-goodsid'));
+			//})
 		}
 	}
 });
 
+cy.directive('helper', function() {
+	return {
+		restrict: 'E',
+		templateUrl: 'tpls/helper.html',
+		replace: true
+	}
+});
+
+//cy.directive('recommenditem', function () {
+//	return {
+//		restrict: 'E',
+//		templateUrl: 'tpls/recommenditem.html',
+//		replace: true,
+//		link: function(s, e, a, c) {
+//			console.log(this);
+//		}
+//	}
+//});
+
 
 // 以下为各控制器
 
-cy.controller('cyController', ['$rootScope', function($rootScope) {
+cy.controller('cyController', ['$rootScope', function($rootScope, socket) {
 
 	$rootScope.meunsDisplay = true;
 	$rootScope.cartDisplay = false;
+	$rootScope.orderDisplay = false;
+	$rootScope.searchDisplay = false;
+	$rootScope.helperDisplay = false;
+
 	$rootScope.noitemsDisplay = true;
 
 	//$rootScope.meunsDisplay = false;
 	//$rootScope.cartDisplay = true;
 	//$rootScope.noitemsDisplay = false;
 
+
+	//$rootScope.meunsDisplay = false;
+	//$rootScope.cartDisplay = false;
+	//$rootScope.noitemsDisplay = false;
+
+
+
+	//$rootScope.message = '';
+	//$rootScope.messages = [];
+	//
+	//socket.on('new:msg', function (message) {
+	//	$rootScope.message.push(message);
+	//});
+	//
+	//
+	//$scope.boradcast = function() {
+	//	socket.emit('broadcast:msg', {message:$scope.message});
+	//	$scope.message.push($scope.message);
+	//	$scope.message = '';
+	//};
+
+
+
+
 	$rootScope.toCart = function() {
+		document.getElementsByClassName('active')[0].classList.remove('active');
+		document.getElementById('cart').classList.add('active');
+		$rootScope.meunsDisplay = false;
+		$rootScope.cartDisplay = true;
 
-		var a = document.querySelectorAll('.navitem');
+		if (document.querySelectorAll('.recommendItem')[0].classList.contains('out')) {
 
-		for (var i in a) {
-			try {
-				a[i].classList.remove('active');
-			} catch (e) {
-				continue;
+		} else {
+			document.querySelectorAll('.recommendItem')[0].classList.add('in');
+			for (var i = 1; i < document.querySelectorAll('.recommendItem').length; i++) {
+				document.querySelectorAll('.recommendItem')[i].classList.add('out');
 			}
 		}
+		for (var i = 0; i < document.querySelectorAll('.recommendItem').length; i++) {
+			if (document.querySelectorAll('.recommendItem')[i].classList.contains('in')) {
+				document.querySelectorAll('.index span')[i].classList.add('current');
+				break;
+			}
+		}
+	};
 
-		document.getElementById('cart').classList.add('active');
 
-		this.meunsDisplay = false;
-		this.cartDisplay = true;
+
+	$rootScope.tonav = function ($event) {
+		document.getElementsByClassName('active')[0].classList.remove('active');
+		$event.target.classList.add('active');
+
+
+
+		switch ($event.target.innerHTML) {
+			case '菜单':
+				$rootScope.meunsDisplay = true;
+				$rootScope.cartDisplay = false;
+				$rootScope.orderDisplay = false;
+				$rootScope.searchDisplay = false;
+				$rootScope.helperDisplay = false;
+				break;
+			case '购物车':
+				$rootScope.meunsDisplay = false;
+				$rootScope.cartDisplay = true;
+				$rootScope.orderDisplay = false;
+				$rootScope.searchDisplay = false;
+				$rootScope.helperDisplay = false;
+				if (document.querySelectorAll('.recommendItem')[0].classList.contains('out')) {
+
+				} else {
+					document.querySelectorAll('.recommendItem')[0].classList.add('in');
+					for (var i = 1; i < document.querySelectorAll('.recommendItem').length; i++) {
+						document.querySelectorAll('.recommendItem')[i].classList.add('out');
+					}
+				}
+				for (var i = 0; i < document.querySelectorAll('.recommendItem').length; i++) {
+					if (document.querySelectorAll('.recommendItem')[i].classList.contains('in')) {
+						document.querySelectorAll('.index span')[i].classList.add('current');
+						break;
+					}
+				}
+				break;
+			case '订单':
+				$rootScope.meunsDisplay = false;
+				$rootScope.cartDisplay = false;
+				$rootScope.orderDisplay = true;
+				$rootScope.searchDisplay = false;
+				$rootScope.helperDisplay = false;
+				break;
+			case '搜索':
+				$rootScope.meunsDisplay = false;
+				$rootScope.cartDisplay = false;
+				$rootScope.orderDisplay = false;
+				$rootScope.searchDisplay = true;
+				$rootScope.helperDisplay = false;
+				break;
+			case '帮助':
+				$rootScope.meunsDisplay = false;
+				$rootScope.cartDisplay = false;
+				$rootScope.orderDisplay = false;
+				$rootScope.searchDisplay = false;
+				$rootScope.helperDisplay = true;
+				break;
+		}
 	};
 
 	$rootScope.toMenus = function($event) {
@@ -274,9 +288,10 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 
 	$rootScope.resMenus = [
 		{
-			id: 1,
+			id: 11,
 			type: 1,
-			name: '1号菜',
+			recommend: 1,
+			name: '绿豆沙',
 			info: '一些其他信息',
 			sales: '99',
 			num: 0,
@@ -285,7 +300,8 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 		{
 			id: 2,
 			type: 1,
-			name: '2号菜',
+			recommend: 1,
+			name: '绿豆冰',
 			info: '一些其他信息',
 			sales: '99',
 			num: 0,
@@ -294,6 +310,7 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 		{
 			id: 3,
 			type: 3,
+			recommend: 0,
 			name: '3号菜',
 			info: '一些其他信息',
 			sales: '99',
@@ -303,6 +320,7 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 		{
 			id: 4,
 			type: 4,
+			recommend: 0,
 			name: '123123',
 			info: '一些其他信息',
 			sales: '99',
@@ -312,6 +330,7 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 		{
 			id: 5,
 			type: 4,
+			recommend: 0,
 			name: 'sdfasdf',
 			info: '一些其他信息',
 			sales: '99',
@@ -321,6 +340,7 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 		{
 			id: 6,
 			type: 2,
+			recommend: 1,
 			name: '凉拌猪耳',
 			info: '一些其他信息',
 			sales: '99',
@@ -395,6 +415,25 @@ cy.controller('cyController', ['$rootScope', function($rootScope) {
 		}
 	};
 
+	$rootScope.submit = function($event) {
+		console.log($rootScope.resMenus);
+	};
+
+
+	$rootScope.addrecomm = function($event) {
+		for (var i in $rootScope.resMenus) {
+			if ($rootScope.resMenus[i].id == $event.target.getAttribute('data-goodsid')) {
+				$rootScope.resMenus[i].num++;
+				$rootScope.count();
+				$rootScope.cartDisplay = true;
+				$rootScope.noitemsDisplay = false;
+				break;
+			}
+
+		}
+	};
+
+
 	$rootScope.hidepop = function($event) {
 		document.getElementsByClassName('pop-panel')[0].style.display = 'none';
 	}
@@ -438,24 +477,124 @@ cy.controller('popController', ['$scope', '$rootScope', function($rootScope, $sc
 		$rootScope.count();
 		$event.stopPropagation();
 	};
+
+
+
+
 }]);
 
 cy.controller('navController', ['$scope', '$rootScope', function($rootScope, $scope) {
-	$scope.tonav = function ($event) {
-		document.getElementsByClassName('active')[0].classList.remove('active');
-		$event.target.classList.add('active');
+	//$scope.tonav = function ($event) {
+	//	document.getElementsByClassName('active')[0].classList.remove('active');
+	//	$event.target.classList.add('active');
+	//
+	//	switch ($event.target.innerHTML) {
+	//		case '菜单':
+	//			$rootScope.meunsDisplay = true;
+	//			$rootScope.cartDisplay = false;
+	//			break;
+	//		case '购物车':
+	//			$rootScope.meunsDisplay = false;
+	//			$rootScope.cartDisplay = true;
+	//			if (document.querySelectorAll('.recommendItem')[0].classList.contains('out')) {
+	//
+	//			} else {
+	//				document.querySelectorAll('.recommendItem')[0].classList.add('in');
+	//				for (var i = 1; i < document.querySelectorAll('.recommendItem').length; i++) {
+	//					document.querySelectorAll('.recommendItem')[i].classList.add('out');
+	//				}
+	//			}
+	//			for (var i = 0; i < document.querySelectorAll('.recommendItem').length; i++) {
+	//				if (document.querySelectorAll('.recommendItem')[i].classList.contains('in')) {
+	//					document.querySelectorAll('.index span')[i].classList.add('current');
+	//					break;
+	//				}
+	//			}
+	//			break;
+	//	}
+	//}
+}]);
 
-		switch ($event.target.innerHTML) {
-			case '菜单':
-				$rootScope.meunsDisplay = true;
-				$rootScope.cartDisplay = false;
+cy.controller('cartRecommController', ['$scope', '$rootScope', function($rootScope, $scope) {
+	var animation = true;
+
+	$scope.getIndex = function(d, e) {
+		var index = 0;
+		var afterindex = 0;
+
+		for (var i = 0; i < e.length - 1; i++) {
+			if (e[i].classList.contains('in')) {
+				index = i;
 				break;
-			case '购物车':
-				$rootScope.meunsDisplay = false;
-				$rootScope.cartDisplay = true;
-				break
+			}
 		}
-	}
+
+		if (d === 'left') {
+			afterindex = index === e.length - 2 ? 0 : index + 1;
+		} else {
+			afterindex = index === 0 ? e.length - 2 : index - 1;
+		}
+
+		return [index, afterindex];
+	};
+
+	$scope.slide = function(d, tmp, e) {
+
+		if (animation) {
+			animation = false;
+
+			for (var i = 0; i < e[e.length-1].children.length; i++) {
+				e[e.length-1].children[i].classList.remove('current');
+			}
+
+			e[e.length-1].children[tmp[1]].classList.add('current');
+
+			e[tmp[0]].classList.remove('in');
+			e[tmp[0]].classList.add('out');
+			e[tmp[1]].classList.remove('out');
+			e[tmp[1]].classList.add('in');
+
+
+			if (d === 'left') {
+				for (var i in tmp) {
+					e[tmp[i]].classList.add('slide');
+					e[tmp[i]].style.display = 'block';
+				}
+				setTimeout(function() {
+					e[tmp[0]].classList.remove('slide');
+					e[tmp[0]].style.display = 'none';
+					e[tmp[1]].classList.remove('slide');
+					animation = true;
+				}, 350);
+			} else {
+				for (var i in tmp) {
+					e[tmp[i]].classList.add('slidereverse');
+					e[tmp[i]].style.display = 'block';
+				}
+				setTimeout(function() {
+					e[tmp[0]].classList.remove('slidereverse');
+					e[tmp[0]].style.display = 'none';
+					e[tmp[1]].classList.remove('slidereverse');
+					animation = true;
+				}, 350);
+			}
+		}
+
+	};
+
+	$scope.left = function($event) {
+		var e = document.getElementsByClassName('cartRecommend')[0].children;
+		var tmp = this.getIndex('left', e);
+		this.slide('left', tmp, e);
+	};
+
+	$scope.right = function($event) {
+		var e = document.getElementsByClassName('cartRecommend')[0].children;
+		var tmp = this.getIndex('right', e);
+		this.slide('right', tmp, e);
+	};
+
+
 }]);
 
 

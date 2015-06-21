@@ -306,6 +306,7 @@ body {
         width: 7px;
         background-color: $color;
         border-radius: 50%;
+        margin: 0 2px;
         &.current {
           background-color: darken($color, 20%);
         }
@@ -549,13 +550,37 @@ nav {
     color: #fff;
     li {
       float: left;
-      width: 25%;
+      width: 20%;
       height: 35px;
       line-height: 35px;
       text-align: center;
       &.active {
         background-color: darken($color, 5%);
       }
+    }
+  }
+}
+
+.helper {
+  position: relative;
+  top: 40px;
+  padding-top: 50px;
+  button {
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    height: 50px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 20px;
+    background-color: $color;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    outline: 0;
+    &:focus {
+      background-color: darken($color, 10%);
+      box-shadow: 0px 0px rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -569,6 +594,42 @@ nav {
   overflow-y: scroll;
   overflow-x: hidden;
   background-color: #fff;
+  .orderctn {
+    padding: 10px;
+    table {
+      width: 100%;
+      caption {
+        h1 {
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+        h2 {
+          text-align: right;
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+          font-size: 14px;
+          border-bottom: 1px dashed #000;
+        }
+        h1, h2 {
+          color: grey;
+        }
+      }
+      tbody, tfoot {
+        tr {
+          td, th {
+            padding: 5px;
+            font-size: 13px;
+            text-align: right;
+          }
+          th {
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+  }
 }
 
 /* Default animation - slide, you can visit 'src/mobilebone.aniamte.css' to get more styles of animation */
@@ -580,11 +641,11 @@ nav {
   -webkit-animation-name: slideouttoleft;
   animation-name: slideouttoleft;
 }
-.slide.reverse.out {
+.slidereverse.out {
   -webkit-animation-name: slideouttoright;
   animation-name: slideouttoright;
 }
-.slide.reverse.in {
+.slidereverse.in {
   -webkit-animation-name: slideinfromleft;
   animation-name: slideinfromleft;
 }
@@ -595,16 +656,16 @@ nav {
   to { -webkit-transform: translate3d(0,0,0); }
 }
 @keyframes slideinfromright {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
+  from { -webkit-transform: translate3d(100%,0,0); }
+  to { -webkit-transform: translate3d(0,0,0); }
 }
 @-webkit-keyframes slideinfromleft {
   from { -webkit-transform: translate3d(-100%,0,0); }
   to { -webkit-transform: translate3d(0,0,0); }
 }
 @keyframes slideinfromleft {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(0); }
+  from { -webkit-transform: translate3d(-100%,0,0); }
+  to { -webkit-transform: translate3d(0,0,0); }
 }
 /* keyframes for slideout to sides */
 @-webkit-keyframes slideouttoleft {
@@ -612,8 +673,8 @@ nav {
   to { -webkit-transform: translate3d(-100%,0,0); }
 }
 @keyframes slideouttoleft {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  from { -webkit-transform: translate3d(0,0,0); }
+  to { -webkit-transform: translate3d(-100%,0,0); }
 }
 @-webkit-keyframes slideouttoright {
   from { -webkit-transform: translate3d(0,0,0); }
@@ -668,9 +729,9 @@ nav {
 }
 
 .in {
-  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-in;
   -webkit-animation-duration: 350ms;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in;
   animation-duration: 350ms;
 }
 .out {

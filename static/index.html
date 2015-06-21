@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="cy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+
+    <link rel="stylesheet" href="../css/screen.css"/>
+    <title>微信点餐</title>
+</head>
+<body ng-controller="cyController">
+    <menusnav></menusnav>
+    <menus ng-show="meunsDisplay"></menus>
+    <cart></cart>
+    <order ng-show="orderDisplay"></order>
+    <helper ng-show="helperDisplay"></helper>
+    <script src="../lib/js/angular.min.js"></script>
+    <script src="../lib/js/angular-touch.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
